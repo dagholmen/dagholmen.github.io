@@ -6,7 +6,7 @@
     <title>Search Results - Best Plastic Surgeon</title>
     <style>
         /* General Reset */
-        body, h1, h2, ul, li, button, input {
+        body, h1, ul, li, button, input {
             margin: 0;
             padding: 0;
             border: 0;
@@ -63,27 +63,21 @@
             left: 0;
         }
 
-        .btn, .btn-secondary {
-            display: inline-block;
+        .btn-secondary {
+            display: block;
             background-color: #000;
             color: #fff;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            padding: 15px 25px;
+            margin: 40px auto 0;
             border-radius: 8px;
+            text-align: center;
             text-decoration: none;
             cursor: pointer;
         }
 
-        .btn:hover, .btn-secondary:hover {
+        .btn-secondary:hover {
             opacity: 0.8;
-        }
-
-        .btn-secondary {
-            font-size: 1.4rem;
-            padding: 15px 25px;
-            display: block;
-            margin: 40px auto 0;
-            text-align: center;
         }
 
         /* Search Bar */
@@ -121,7 +115,7 @@
         .result-header {
             display: flex;
             align-items: center;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .result img {
@@ -132,33 +126,33 @@
             object-fit: cover;
         }
 
-        .result a {
-            color: #1a0dab;
-            font-size: 1.2rem;
+        .result-info .practice-name {
+            font-size: 1rem;
             font-weight: bold;
-            text-decoration: none;
+            margin-bottom: 3px;
         }
 
-        .result a:hover {
-            text-decoration: underline;
-        }
-
-        .result .url {
+        .result-info .url {
             color: #006621;
             font-size: 0.9rem;
+        }
+
+        .result-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1a0dab;
             margin-bottom: 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .result-title:hover {
+            text-decoration: underline;
         }
 
         .result p {
             font-size: 1rem;
             color: #545454;
-            margin-left: 50px; /* Align text with titles */
-        }
-
-        /* Bottom CTA */
-        .bottom-cta {
-            text-align: center;
-            margin-top: 50px;
         }
     </style>
 </head>
@@ -174,7 +168,7 @@
             <li>Get 5-10 new booked patients per week</li>
             <li>Guaranteed exclusivity and results</li>
         </ul>
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn">Get in touch</a>
+        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
     </div>
 
     <!-- Search Bar -->
@@ -188,11 +182,12 @@
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6407.PNG" alt="Thumbnail">
-                <div>
-                    <a href="https://bestplasticsurgery.com" target="_blank">Dr. Your Name Here - Best Plastic Surgery in Beverly Hills</a>
+                <div class="result-info">
+                    <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
                     <div class="url">https://bestplasticsurgery.com</div>
                 </div>
             </div>
+            <a href="https://bestplasticsurgery.com" target="_blank" class="result-title">Best Plastic Surgery in Beverly Hills</a>
             <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
         </div>
 
@@ -200,29 +195,31 @@
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
-                <div>
-                    <a href="#">Smith Plastic Surgery Clinic</a>
+                <div class="result-info">
+                    <div class="practice-name">Smith Plastic Surgery Clinic</div>
                     <div class="url">https://smithsurgery.com</div>
                 </div>
             </div>
-            <p>We’re on page one but still can’t get enough patients. Everyone goes to Dr. Your Name Here.</p>
+            <a href="#" class="result-title">We’re on page one but can’t get enough patients</a>
+            <p>Everyone goes to Dr. Your Name Here for their plastic surgery needs. Contact us to learn more.</p>
         </div>
 
         <!-- Competitor Result 2 -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
-                <div>
-                    <a href="#">Anderson Aesthetic Center</a>
+                <div class="result-info">
+                    <div class="practice-name">Anderson Aesthetic Center</div>
                     <div class="url">https://andersonaesthetics.com</div>
                 </div>
             </div>
-            <p>Despite great reviews, patients still prefer Dr. Your Name Here for their plastic surgery needs.</p>
+            <a href="#" class="result-title">Why patients prefer Dr. Your Name Here</a>
+            <p>Despite great reviews, patients still book their consultations with Dr. Your Name Here.</p>
         </div>
     </div>
 
     <!-- Bottom CTA -->
-    <div class="bottom-cta">
+    <div class="center-section">
         <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">I want to be number #1 and fully booked year round</a>
     </div>
 </body>
