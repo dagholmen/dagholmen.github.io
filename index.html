@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become Number #1 on Google</title>
+    <title>Become #1 in Their Industry</title>
     <style>
         /* General Reset */
-        body, h1, button {
+        body, h1, ul, li, button {
             margin: 0;
             padding: 0;
             border: 0;
@@ -22,19 +22,46 @@
             padding: 20px;
         }
 
+        /* Logo Styling */
+        .logo {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 40px;
+        ul {
+            list-style: none;
+            margin: 0 auto 40px;
+            padding: 0;
+            max-width: 400px;
+            text-align: left;
         }
 
-        button {
+        li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        /* Custom bullet */
+        li::before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Button Styling */
+        .btn {
             display: inline-block;
             background-color: #000;
             color: #fff;
@@ -46,21 +73,26 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .btn:hover {
             opacity: 0.8;
         }
     </style>
 </head>
 <body>
-    <!-- Main Heading -->
-    <h1>Become Number #1 on Google</h1>
+    <!-- Logo -->
+    <img src="1s.svg" alt="1s Logo" class="logo">
 
-    <!-- Image -->
-    <img src="167ff84285528946e7044b1309c63242_1200_80.webp" alt="Google Search Results Example">
+    <!-- Heading -->
+    <h1>Become the #1 choice in their industry.</h1>
+
+    <!-- List Items -->
+    <ul>
+        <li>Appear at the top of Google in your city</li>
+        <li>Get 5-10 new booked patients per week</li>
+        <li>Guaranteed exclusivity and results</li>
+    </ul>
 
     <!-- Button -->
-    <a href="https://calendly.com/dag-holmen/meeting" target="_blank">
-        <button>Get in touch</button>
-    </a>
+    <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn">Get in touch</a>
 </body>
 </html>
