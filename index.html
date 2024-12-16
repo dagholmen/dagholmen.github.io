@@ -19,7 +19,9 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Logo Styling */
@@ -33,6 +35,7 @@
         .center-section {
             text-align: center;
             margin-bottom: 40px;
+            max-width: 600px;
         }
 
         .center-section h1 {
@@ -64,13 +67,14 @@
             left: 0;
         }
 
+        /* CTA Buttons */
         .btn-secondary {
-            display: block;
+            display: inline-block; /* Adjust for desktop */
             background-color: #000;
             color: #fff;
             font-size: 1.4rem;
             padding: 15px 25px;
-            margin: 40px auto 0;
+            margin: 20px auto;
             border-radius: 8px;
             text-align: center;
             text-decoration: none;
@@ -79,6 +83,12 @@
 
         .btn-secondary:hover {
             opacity: 0.8;
+        }
+
+        .button-text-below {
+            font-size: 1rem;
+            color: #5f6368;
+            margin-top: 5px;
         }
 
         /* Search Bar */
@@ -103,16 +113,16 @@
         /* Search Results */
         .results-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             position: relative;
         }
 
         .result {
-            margin-bottom: 5px; /* Reduced spacing between results */
+            margin-bottom: 5px;
             line-height: 1.4;
-            position: relative;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.95); /* Default background */
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.95);
+            text-align: left;
         }
 
         .result-header {
@@ -131,7 +141,6 @@
 
         .result-info .practice-name {
             font-size: 14px;
-            font-weight: regular;
             margin-bottom: 3px;
         }
 
@@ -142,15 +151,20 @@
 
         .result-title {
             font-size: 20px;
-            font-weight: regular;
             color: #1a0dab;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             text-decoration: none;
             display: block;
         }
 
         .result-title:hover {
             text-decoration: underline;
+        }
+
+        .result p {
+            font-size: 1rem;
+            color: #545454;
+            margin-top:-3px
         }
 
         /* Star Rating */
@@ -171,22 +185,20 @@
             color: #5f6368;
         }
 
-        .result p {
-            font-size: 1rem;
-            color: #545454;
-            margin-top: -3px;
+        /* Centered Bold Text */
+        .bold-text {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 30px 0;
         }
 
-        /* Gradient Overlay */
-        .results-container::after {
-            content: "";
-            position: absolute;
-            top: 100px; /* Starts after the first search result */
-            left: 0;
-            width: 100%;
-            height: calc(100% - 100px);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
-            pointer-events: none; /* Prevents overlay from blocking content */
+        /* Responsive Button */
+        @media (max-width: 768px) {
+            .btn-secondary {
+                display: block;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -221,15 +233,15 @@
                     <div class="url">https://bestplasticsurgery.com</div>
                 </div>
             </div>
-            <a href="https://bestplasticsurgery.com" target="_blank" class="result-title">Best Plastic Surgery in Beverly Hills</a>
+            <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
             <div class="star-rating">
                 <div class="stars">★★★★★</div>
                 <span>5.0 (999 reviews)</span>
             </div>
-            <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
+            <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
         </div>
 
-        <!-- Competitor Result 1 -->
+        <!-- Competitor Results -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -239,10 +251,9 @@
                 </div>
             </div>
             <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-            <p>Providing standard services but losing patients to more experienced surgeons in Beverly Hills.</p>
+            <p>Providing standard services but losing patients to more experienced surgeons.</p>
         </div>
 
-        <!-- Competitor Result 2 -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -252,13 +263,37 @@
                 </div>
             </div>
             <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here for exceptional results.</p>
+            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
+        </div>
+
+        <!-- New Competitor Result -->
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Taylor Cosmetic Clinic</div>
+                    <div class="url">https://taylorclinic.com</div>
+                </div>
+            </div>
+            <a href="#" class="result-title">Cosmetic Procedures on a Budget</a>
+            <p>Patients look for affordability, but they still prefer trusted surgeons like Dr. Your Name Here.</p>
         </div>
     </div>
 
-    <!-- Bottom CTA -->
+    <!-- Centered Bold Text -->
+    <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
+
+    <!-- Repeated Section -->
     <div class="center-section">
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">I want to be number #1 and fully booked year round</a>
+        <h1>Become the #1 choice in Your industry.</h1>
+        <ul>
+            <li>Appear at the top of Google in your city</li>
+            <li>Get 5-10 new booked patients per week</li>
+            <li>Guaranteed exclusivity and results</li>
+        </ul>
+        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+        <div class="button-text-below">I want to be number #1 and fully booked year round</div>
     </div>
 </body>
 </html>
+
