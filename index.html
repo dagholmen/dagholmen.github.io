@@ -3,99 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become #1 in Your Industry</title>
-    
-    <!-- Import Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Google Search Results - Best Plastic Surgeon</title>
     <style>
         /* General Reset */
-        body, h1, ul, li, button {
+        body, h1, h2, h3, p, a {
             margin: 0;
             padding: 0;
-            border: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: Poppins, sans-serif;
-            text-align: center;
             background-color: #fff;
-            color: #000;
+            color: #202124;
             line-height: 1.6;
-            margin: 0;
             padding: 20px;
         }
 
-        /* Logo Styling */
-        .logo {
-            width: 100px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
+        /* Header Search Bar */
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .search-bar {
+            width: 90%;
+            max-width: 600px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
         }
 
-        ul {
-            list-style: none;
-            margin: 0 auto 40px;
-            padding: 0;
-            max-width: 400px;
-            text-align: left;
+        .search-bar:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
         }
 
-        li {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
+        /* Search Results Section */
+        .search-result {
+            margin-bottom: 25px;
+            font-size: 0.9rem;
         }
 
-        /* Custom bullet */
-        li::before {
-            content: "•";
-            color: #000;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Button Styling */
-        .btn {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
+        .search-result a {
+            color: #1a0dab;
             font-size: 1.2rem;
-            border: none;
-            border-radius: 8px;
             text-decoration: none;
-            cursor: pointer;
         }
 
-        .btn:hover {
-            opacity: 0.8;
+        .search-result a:hover {
+            text-decoration: underline;
+        }
+
+        .search-result .url {
+            color: #006621;
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+
+        .search-result p {
+            font-size: 0.9rem;
+            color: #4d5156;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <!-- Logo -->
-    <img src="1s.svg" alt="1s Logo" class="logo">
 
-    <!-- Heading -->
-    <h1>Become the #1 choice in Your industry.</h1>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" value="best plastic surgeon near me" readonly>
+    </div>
 
-    <!-- List Items -->
-    <ul>
-        <li>Appear at the top of Google in your city</li>
-        <li>Get 5-10 new booked patients per week</li>
-        <li>Guaranteed exclusivity and results</li>
-    </ul>
+    <!-- Search Result 1 -->
+    <div class="search-result">
+        <a href="https://bestplasticsurgery.com">Dr. Your Name Here - Best Plastic Surgery in Beverly Hills</a>
+        <div class="url">https://bestplasticsurgery.com</div>
+        <p>Dr. Your Name Here, MD, FACS, is the best plastic surgeon in Beverly Hills, specializing in transformative cosmetic surgery that enhances natural beauty.</p>
+    </div>
 
-    <!-- Button -->
-    <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn">Get in touch</a>
+    <!-- Search Result 2 -->
+    <div class="search-result">
+        <a href="https://bestplasticsurgery.com">Dr. Your Name Here - Best Plastic Surgery in Newport Beach</a>
+        <div class="url">https://bestplasticsurgery.com</div>
+        <p>Dr. Your Name Here, MD, FACS, provides exceptional plastic surgery in Newport Beach, offering expert care and remarkable results for patients.</p>
+    </div>
+
+    <!-- Search Result 3 -->
+    <div class="search-result">
+        <a href="https://bestplasticsurgery.com">Dr. Your Name Here - Best Plastic Surgery in Los Angeles</a>
+        <div class="url">https://bestplasticsurgery.com</div>
+        <p>Dr. Your Name Here, MD, FACS, is renowned for delivering the best plastic surgery in Los Angeles, combining skill, artistry, and patient-centered care.</p>
+    </div>
+
 </body>
 </html>
