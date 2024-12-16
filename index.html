@@ -19,7 +19,9 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Logo Styling */
@@ -33,6 +35,7 @@
         .center-section {
             text-align: center;
             margin-bottom: 40px;
+            max-width: 600px;
         }
 
         .center-section h1 {
@@ -66,7 +69,7 @@
 
         /* CTA Buttons */
         .btn-secondary {
-            display: inline-block; /* Adjusted for desktop */
+            display: inline-block; /* Adjust for desktop */
             background-color: #000;
             color: #fff;
             font-size: 1.4rem;
@@ -110,16 +113,16 @@
         /* Search Results */
         .results-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             position: relative;
         }
 
         .result {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             line-height: 1.4;
-            position: relative;
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.95);
+            text-align: left;
         }
 
         .result-header {
@@ -149,7 +152,7 @@
         .result-title {
             font-size: 20px;
             color: #1a0dab;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             text-decoration: none;
             display: block;
         }
@@ -158,6 +161,12 @@
             text-decoration: underline;
         }
 
+        .result p {
+            font-size: 1rem;
+            color: #545454;
+        }
+
+        /* Star Rating */
         .star-rating {
             display: flex;
             align-items: center;
@@ -175,24 +184,7 @@
             color: #5f6368;
         }
 
-        .result p {
-            font-size: 1rem;
-            color: #545454;
-        }
-
-        /* Gradient Overlay */
-        .results-container::after {
-            content: "";
-            position: absolute;
-            top: 100px;
-            left: 0;
-            width: 100%;
-            height: calc(100% - 100px);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
-            pointer-events: none;
-        }
-
-        /* Bold Centered Text */
+        /* Centered Bold Text */
         .bold-text {
             text-align: center;
             font-weight: bold;
@@ -231,6 +223,7 @@
 
     <!-- Search Results -->
     <div class="results-container">
+        <!-- Top Result -->
         <div class="result">
             <div class="result-header">
                 <img src="1s.svg" alt="Thumbnail">
@@ -247,6 +240,7 @@
             <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
         </div>
 
+        <!-- Competitor Results -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -258,9 +252,8 @@
             <a href="#" class="result-title">Generic Plastic Surgery Services</a>
             <p>Providing standard services but losing patients to more experienced surgeons.</p>
         </div>
-    </div>
 
-    <div class="result">
+        <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
                 <div class="result-info">
@@ -269,8 +262,22 @@
                 </div>
             </div>
             <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here for exceptional results.</p>
+            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
         </div>
+
+        <!-- New Competitor Result -->
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Taylor Cosmetic Clinic</div>
+                    <div class="url">https://taylorclinic.com</div>
+                </div>
+            </div>
+            <a href="#" class="result-title">Cosmetic Procedures on a Budget</a>
+            <p>Patients look for affordability, but they still prefer trusted surgeons like Dr. Your Name Here.</p>
+        </div>
+    </div>
 
     <!-- Centered Bold Text -->
     <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
