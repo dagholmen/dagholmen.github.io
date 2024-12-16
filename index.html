@@ -85,7 +85,7 @@
             max-width: 600px;
             margin: 0 auto 30px;
             text-align: center;
-            padding: 0 15px; /* Equal spacing on mobile */
+            padding: 0 15px; /* Even spacing on mobile */
         }
 
         .search-bar {
@@ -97,10 +97,6 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
             outline: none;
             box-sizing: border-box;
-        }
-
-        .search-bar:focus {
-            border-color: #4285f4;
         }
 
         /* Search Results */
@@ -117,7 +113,7 @@
         .result-header {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .result img {
@@ -152,25 +148,22 @@
             text-decoration: underline;
         }
 
+        /* Star Rating */
         .star-rating {
             display: flex;
             align-items: center;
             margin-bottom: 5px;
-            font-size: 0.9rem;
-            color: #5f6368;
         }
 
         .star-rating .stars {
-            display: inline-block;
-            width: 100px;
-            height: 10px;
-            background: linear-gradient(to right, gold 100%, #ddd 0%);
-            margin-right: 5px;
-            position: relative;
+            color: gold;
+            font-size: 1rem;
         }
 
         .star-rating span {
             margin-left: 5px;
+            font-size: 0.9rem;
+            color: #5f6368;
         }
 
         .result p {
@@ -201,7 +194,7 @@
 
     <!-- Search Results -->
     <div class="results-container">
-        <!-- Result 1 -->
+        <!-- Top Result -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6407.PNG" alt="Thumbnail">
@@ -212,14 +205,13 @@
             </div>
             <a href="https://bestplasticsurgery.com" target="_blank" class="result-title">Best Plastic Surgery in Beverly Hills</a>
             <div class="star-rating">
-                <div class="stars"></div>
-                <span>5.0</span>
-                <span>(999 reviews)</span>
+                <div class="stars">★★★★★</div>
+                <span>5.0 (999 reviews)</span>
             </div>
             <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
         </div>
 
-        <!-- Competitor Result -->
+        <!-- Competitor Result 1 -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -228,13 +220,21 @@
                     <div class="url">https://smithsurgery.com</div>
                 </div>
             </div>
-            <a href="#" class="result-title">We’re on page one but can’t get enough patients</a>
-            <div class="star-rating">
-                <div class="stars" style="background:linear-gradient(to right, gold 60%, #ddd 0%)"></div>
-                <span>3.0</span>
-                <span>(123 reviews)</span>
+            <a href="#" class="result-title">Generic Plastic Surgery Services</a>
+            <p>Providing standard services but losing patients to more experienced surgeons in Beverly Hills.</p>
+        </div>
+
+        <!-- Competitor Result 2 -->
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Anderson Aesthetic Center</div>
+                    <div class="url">https://andersonaesthetics.com</div>
+                </div>
             </div>
-            <p>Everyone goes to Dr. Your Name Here for their plastic surgery needs. Contact us to learn more.</p>
+            <a href="#" class="result-title">Affordable Plastic Surgery</a>
+            <p>We offer budget-friendly options, but patients still choose Dr. Your Name Here for exceptional results.</p>
         </div>
     </div>
 
