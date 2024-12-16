@@ -24,42 +24,37 @@
             align-items: center;
         }
 
-        /* Section Wrapping */
-        .hero-section, .search-section, .footer-section {
-            width: 100%;
-            position: relative;
+        /* Logo Styling */
+        .logo {
+            width: 100px;
+            margin: 0 auto 20px;
+            display: block;
         }
 
         /* Hero Section */
-        .hero-section {
-            text-align: center;
-            margin-bottom: 40px;
-            max-width: 600px;
-            padding: 0 20px;
-        }
-
-        .hero-section h1 {
+        h1 {
             font-size: 2.5rem;
             font-weight: bold;
-            line-height: 1.1; /* 30% smaller line height */
+            line-height: 1.1; /* Reduced line height */
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        .hero-section ul {
+        ul {
             list-style: none;
             text-align: left;
             margin-bottom: 20px;
             padding: 0;
         }
 
-        .hero-section li {
+        li {
             margin-bottom: 10px;
             font-size: 1.1rem;
             position: relative;
             padding-left: 20px;
         }
 
-        .hero-section li::before {
+        li::before {
             content: "•";
             color: #000;
             font-weight: bold;
@@ -93,6 +88,7 @@
             font-size: 1rem;
             color: #5f6368;
             margin-top: 5px;
+            text-align: center;
         }
 
         /* Search Bar */
@@ -117,22 +113,18 @@
             box-sizing: border-box;
         }
 
-        /* Search Section */
-        .search-section {
+        /* Search Results */
+        .results-container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
         }
 
-        .search-section .results-container {
-            position: relative;
-        }
-
         .results-container::after {
             content: "";
             position: absolute;
-            top: 120px; /* Starts after the first search result */
+            top: 120px; /* Starts after the first result */
             left: 0;
             width: 100%;
             height: calc(100% - 120px);
@@ -196,18 +188,18 @@
         }
 
         /* Footer Section */
-        .footer-section {
-            margin-top: -50px; /* Overlaps the last result slightly */
-            z-index: 2;
-            position: relative;
-            padding-top: 50px;
-        }
-
         .bold-text {
             text-align: center;
             font-weight: bold;
             font-size: 1.4rem;
             margin: 30px 0;
+            z-index: 2;
+        }
+
+        .footer-content {
+            margin-top: -50px; /* Overlaps the last result */
+            z-index: 2;
+            position: relative;
         }
 
         @media (max-width: 768px) {
@@ -222,9 +214,87 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <img src="1s.svg" alt="1s Logo" class="logo">
+    <!-- Logo -->
+    <img src="1s.svg" alt="1s Logo" class="logo">
+
+    <!-- Hero Content -->
+    <h1>Become the #1 choice in Your industry.</h1>
+    <ul>
+        <li>Appear at the top of Google in your city</li>
+        <li>Get 5-10 new booked patients per week</li>
+        <li>Guaranteed exclusivity and results</li>
+    </ul>
+    <div class="button-container">
+        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" value="best plastic surgeon near me" readonly>
+    </div>
+
+    <!-- Search Results -->
+    <div class="results-container">
+        <div class="results-content">
+            <!-- Top Result -->
+            <div class="result">
+                <div class="result-header">
+                    <img src="1s.svg" alt="Thumbnail">
+                    <div class="result-info">
+                        <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
+                        <div class="url">https://bestplasticsurgery.com</div>
+                    </div>
+                </div>
+                <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
+                <div class="star-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>5.0 (999 reviews)</span>
+                </div>
+                <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
+            </div>
+
+            <!-- Competitor Results -->
+            <div class="result">
+                <div class="result-header">
+                    <img src="IMG_6409.jpg" alt="Thumbnail">
+                    <div class="result-info">
+                        <div class="practice-name">Smith Plastic Surgery Clinic</div>
+                        <div class="url">https://smithsurgery.com</div>
+                    </div>
+                </div>
+                <a href="#" class="result-title">Generic Plastic Surgery Services</a>
+                <p>Providing standard services but losing patients to more experienced surgeons.</p>
+            </div>
+
+            <div class="result">
+                <div class="result-header">
+                    <img src="IMG_6409.jpg" alt="Thumbnail">
+                    <div class="result-info">
+                        <div class="practice-name">Anderson Aesthetic Center</div>
+                        <div class="url">https://andersonaesthetics.com</div>
+                    </div>
+                </div>
+                <a href="#" class="result-title">Affordable Plastic Surgery</a>
+                <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
+            </div>
+
+            <div class="result">
+                <div class="result-header">
+                    <img src="IMG_6409.jpg" alt="Thumbnail">
+                    <div class="result-info">
+                        <div class="practice-name">Taylor Cosmetic Clinic</div>
+                        <div class="url">https://taylorclinic.com</div>
+                    </div>
+                </div>
+                <a href="#" class="result-title">Cosmetic Procedures on a Budget</a>
+                <p>Patients look for affordability, but they still prefer trusted surgeons like Dr. Your Name Here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Content -->
+    <div class="footer-content">
+        <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
         <h1>Become the #1 choice in Your industry.</h1>
         <ul>
             <li>Appear at the top of Google in your city</li>
@@ -234,87 +304,7 @@
         <div class="button-container">
             <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
         </div>
-    </div>
-
-    <!-- Search Section -->
-    <div class="search-section">
-        <div class="search-container">
-            <input type="text" class="search-bar" value="best plastic surgeon near me" readonly>
-        </div>
-        <div class="results-container">
-            <div class="results-content">
-                <!-- Top Result -->
-                <div class="result">
-                    <div class="result-header">
-                        <img src="1s.svg" alt="Thumbnail">
-                        <div class="result-info">
-                            <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
-                            <div class="url">https://bestplasticsurgery.com</div>
-                        </div>
-                    </div>
-                    <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
-                    <div class="star-rating">
-                        <div class="stars">★★★★★</div>
-                        <span>5.0 (999 reviews)</span>
-                    </div>
-                    <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
-                </div>
-
-                <!-- Competitor Results -->
-                <div class="result">
-                    <div class="result-header">
-                        <img src="IMG_6409.jpg" alt="Thumbnail">
-                        <div class="result-info">
-                            <div class="practice-name">Smith Plastic Surgery Clinic</div>
-                            <div class="url">https://smithsurgery.com</div>
-                        </div>
-                    </div>
-                    <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-                    <p>Providing standard services but losing patients to more experienced surgeons.</p>
-                </div>
-
-                <div class="result">
-                    <div class="result-header">
-                        <img src="IMG_6409.jpg" alt="Thumbnail">
-                        <div class="result-info">
-                            <div class="practice-name">Anderson Aesthetic Center</div>
-                            <div class="url">https://andersonaesthetics.com</div>
-                        </div>
-                    </div>
-                    <a href="#" class="result-title">Affordable Plastic Surgery</a>
-                    <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
-                </div>
-
-                <div class="result">
-                    <div class="result-header">
-                        <img src="IMG_6409.jpg" alt="Thumbnail">
-                        <div class="result-info">
-                            <div class="practice-name">Taylor Cosmetic Clinic</div>
-                            <div class="url">https://taylorclinic.com</div>
-                        </div>
-                    </div>
-                    <a href="#" class="result-title">Cosmetic Procedures on a Budget</a>
-                    <p>Patients look for affordability, but they still prefer trusted surgeons like Dr. Your Name Here.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer-section">
-        <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
-        <div class="hero-section">
-            <h1>Become the #1 choice in Your industry.</h1>
-            <ul>
-                <li>Appear at the top of Google in your city</li>
-                <li>Get 5-10 new booked patients per week</li>
-                <li>Guaranteed exclusivity and results</li>
-            </ul>
-            <div class="button-container">
-                <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
-            </div>
-            <div class="button-text-below">I want to be number #1 and fully booked year round</div>
-        </div>
+        <div class="button-text-below">I want to be number #1 and fully booked year round</div>
     </div>
 </body>
 </html>
