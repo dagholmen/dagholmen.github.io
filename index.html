@@ -36,6 +36,7 @@
             text-align: center;
             margin-bottom: 40px;
             max-width: 600px;
+            padding: 0 20px;
         }
 
         .center-section h1 {
@@ -47,9 +48,9 @@
 
         .center-section ul {
             list-style: none;
-            display: inline-block;
             text-align: left;
             margin-bottom: 20px;
+            padding: 0;
         }
 
         .center-section li {
@@ -67,8 +68,13 @@
             left: 0;
         }
 
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .btn-secondary {
-            display: inline-block;
             background-color: #000;
             color: #fff;
             font-size: 1.2rem;
@@ -92,10 +98,9 @@
 
         /* Search Bar */
         .search-container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto 30px;
-            text-align: center;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
         .search-bar {
@@ -113,11 +118,11 @@
         .results-container {
             max-width: 800px;
             margin: 0 auto 30px;
-            position: relative;
+            padding: 0 20px;
         }
 
         .result {
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reduced spacing between results */
             line-height: 1.4;
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.95);
@@ -151,7 +156,7 @@
         .result-title {
             font-size: 20px;
             color: #1a0dab;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
             text-decoration: none;
             display: block;
         }
@@ -223,7 +228,9 @@
             <li>Get 5-10 new booked patients per week</li>
             <li>Guaranteed exclusivity and results</li>
         </ul>
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+        <div class="button-container">
+            <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+        </div>
     </div>
 
     <!-- Search Bar -->
@@ -275,7 +282,6 @@
             <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
         </div>
 
-        <!-- New Competitor Result -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -300,7 +306,9 @@
             <li>Get 5-10 new booked patients per week</li>
             <li>Guaranteed exclusivity and results</li>
         </ul>
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+        <div class="button-container">
+            <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+        </div>
         <div class="button-text-below">I want to be number #1 and fully booked year round</div>
     </div>
 </body>
