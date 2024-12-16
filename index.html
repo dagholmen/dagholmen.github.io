@@ -19,9 +19,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative;
         }
 
         /* Logo Styling */
@@ -31,30 +29,34 @@
             display: block;
         }
 
-        /* Hero Section */
-        h1 {
+        /* Top Section */
+        .center-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .center-section h1 {
             font-size: 2.5rem;
             font-weight: bold;
-            line-height: 1.1; /* Reduced line height */
+            line-height: 1.2;
             margin-bottom: 20px;
-            text-align: center;
         }
 
-        ul {
+        .center-section ul {
             list-style: none;
+            display: inline-block;
             text-align: left;
             margin-bottom: 20px;
-            padding: 0;
         }
 
-        li {
+        .center-section li {
             margin-bottom: 10px;
             font-size: 1.1rem;
             position: relative;
             padding-left: 20px;
         }
 
-        li::before {
+        .center-section li::before {
             content: "•";
             color: #000;
             font-weight: bold;
@@ -62,18 +64,13 @@
             left: 0;
         }
 
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .btn-secondary {
+            display: block;
             background-color: #000;
             color: #fff;
-            font-size: 1.2rem;
-            padding: 12px 20px;
-            margin-top: 20px;
+            font-size: 1.4rem;
+            padding: 15px 25px;
+            margin: 40px auto 0;
             border-radius: 8px;
             text-align: center;
             text-decoration: none;
@@ -84,28 +81,18 @@
             opacity: 0.8;
         }
 
-        .button-text-below {
-            font-size: 1rem;
-            color: #5f6368;
-            margin-top: 5px;
-            text-align: center;
-        }
-
         /* Search Bar */
         .search-container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto 30px;
-            padding: 0 20px;
-            display: flex;
-            justify-content: center;
+            text-align: center;
+            padding: 0 15px;
         }
 
         .search-bar {
             width: 100%;
-            max-width: 800px;
-            min-width: 400px; /* Ensure minimum width on desktop */
-            padding: 15px;
-            font-size: 1.1rem;
+            padding: 12px 15px;
+            font-size: 1rem;
             border: 1px solid #ddd;
             border-radius: 25px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -117,33 +104,15 @@
         .results-container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
             position: relative;
-        }
-
-        .results-container::after {
-            content: "";
-            position: absolute;
-            top: 120px; /* Starts after the first result */
-            left: 0;
-            width: 100%;
-            height: calc(100% - 120px);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .results-content {
-            position: relative;
-            z-index: 1;
         }
 
         .result {
-            margin-bottom: 10px; /* Reduced spacing between results */
+            margin-bottom: 5px; /* Reduced spacing between results */
             line-height: 1.4;
+            position: relative;
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.95);
-            text-align: left;
+            background-color: rgba(255, 255, 255, 0.95); /* Default background */
         }
 
         .result-header {
@@ -162,6 +131,7 @@
 
         .result-info .practice-name {
             font-size: 14px;
+            font-weight: regular;
             margin-bottom: 3px;
         }
 
@@ -172,8 +142,9 @@
 
         .result-title {
             font-size: 20px;
+            font-weight: regular;
             color: #1a0dab;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             text-decoration: none;
             display: block;
         }
@@ -182,34 +153,40 @@
             text-decoration: underline;
         }
 
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .star-rating .stars {
+            color: #fdd663;
+            font-size: 1rem;
+        }
+
+        .star-rating span {
+            margin-left: 5px;
+            font-size: 0.9rem;
+            color: #5f6368;
+        }
+
         .result p {
             font-size: 1rem;
             color: #545454;
+            margin-top:-3px;
         }
 
-        /* Footer Section */
-        .bold-text {
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.4rem;
-            margin: 30px 0;
-            z-index: 2;
-        }
-
-        .footer-content {
-            margin-top: -50px; /* Overlaps the last result */
-            z-index: 2;
-            position: relative;
-        }
-
-        @media (max-width: 768px) {
-            .btn-secondary {
-                width: 100%; /* Full width on mobile */
-            }
-
-            .search-bar {
-                min-width: unset; /* Full width on smaller screens */
-            }
+        /* Gradient Overlay */
+        .results-container::after {
+            content: "";
+            position: absolute;
+            top: 100px; /* Starts after the first search result */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 100px);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
+            pointer-events: none; /* Prevents overlay from blocking content */
         }
     </style>
 </head>
@@ -217,14 +194,14 @@
     <!-- Logo -->
     <img src="1s.svg" alt="1s Logo" class="logo">
 
-    <!-- Hero Content -->
-    <h1>Become the #1 choice in Your industry.</h1>
-    <ul>
-        <li>Appear at the top of Google in your city</li>
-        <li>Get 5-10 new booked patients per week</li>
-        <li>Guaranteed exclusivity and results</li>
-    </ul>
-    <div class="button-container">
+    <!-- Top Section -->
+    <div class="center-section">
+        <h1>Become the #1 choice in Your industry.</h1>
+        <ul>
+            <li>Appear at the top of Google in your city</li>
+            <li>Get 5-10 new booked patients per week</li>
+            <li>Guaranteed exclusivity and results</li>
+        </ul>
         <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
     </div>
 
@@ -235,64 +212,52 @@
 
     <!-- Search Results -->
     <div class="results-container">
-        <div class="results-content">
-            <!-- Top Result -->
-            <div class="result">
-                <div class="result-header">
-                    <img src="1s.svg" alt="Thumbnail">
-                    <div class="result-info">
-                        <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
-                        <div class="url">https://bestplasticsurgery.com</div>
-                    </div>
+        <!-- Top Result -->
+        <div class="result">
+            <div class="result-header">
+                <img src="1s.svg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
+                    <div class="url">https://bestplasticsurgery.com</div>
                 </div>
-                <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
-                <div class="star-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>5.0 (999 reviews)</span>
-                </div>
-                <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
             </div>
+            <a href="https://bestplasticsurgery.com" target="_blank" class="result-title">Best Plastic Surgery in Beverly Hills</a>
+            <div class="star-rating">
+                <div class="stars">★★★★★</div>
+                <span>5.0 (999 reviews)</span>
+            </div>
+            <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
+        </div>
 
-            <!-- Competitor Results -->
-            <div class="result">
-                <div class="result-header">
-                    <img src="IMG_6409.jpg" alt="Thumbnail">
-                    <div class="result-info">
-                        <div class="practice-name">Smith Plastic Surgery Clinic</div>
-                        <div class="url">https://smithsurgery.com</div>
-                    </div>
+        <!-- Competitor Result 1 -->
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Smith Plastic Surgery Clinic</div>
+                    <div class="url">https://smithsurgery.com</div>
                 </div>
-                <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-                <p>Providing standard services but losing patients to more experienced surgeons.</p>
             </div>
+            <a href="#" class="result-title">Generic Plastic Surgery Services</a>
+            <p>Providing standard services but losing patients to more experienced surgeons in Beverly Hills.</p>
+        </div>
 
-            <div class="result">
-                <div class="result-header">
-                    <img src="IMG_6409.jpg" alt="Thumbnail">
-                    <div class="result-info">
-                        <div class="practice-name">Anderson Aesthetic Center</div>
-                        <div class="url">https://andersonaesthetics.com</div>
-                    </div>
+        <!-- Competitor Result 2 -->
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Anderson Aesthetic Center</div>
+                    <div class="url">https://andersonaesthetics.com</div>
                 </div>
-                <a href="#" class="result-title">Affordable Plastic Surgery</a>
-                <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
             </div>
-
-            <div class="result">
-                <div class="result-header">
-                    <img src="IMG_6409.jpg" alt="Thumbnail">
-                    <div class="result-info">
-                        <div class="practice-name">Taylor Cosmetic Clinic</div>
-                        <div class="url">https://taylorclinic.com</div>
-                    </div>
-                </div>
-                <a href="#" class="result-title">Cosmetic Procedures on a Budget</a>
-                <p>Patients look for affordability, but they still prefer trusted surgeons like Dr. Your Name Here.</p>
-            </div>
+            <a href="#" class="result-title">Affordable Plastic Surgery</a>
+            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here for exceptional results.</p>
         </div>
     </div>
 
-    <!-- Footer Content -->
+    <!-- Bottom CTA -->
+
     <div class="footer-content">
         <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
         <h1>Become the #1 choice in Your industry.</h1>
@@ -306,5 +271,6 @@
         </div>
         <div class="button-text-below">I want to be number #1 and fully booked year round</div>
     </div>
+
 </body>
 </html>
