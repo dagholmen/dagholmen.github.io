@@ -39,7 +39,7 @@
         }
 
         .center-section h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             line-height: 1.2;
             margin-bottom: 20px;
@@ -56,7 +56,7 @@
             margin-bottom: 10px;
             font-size: 1.1rem;
             position: relative;
-            padding-left: 10px;
+            padding-left: 20px;
         }
 
         .center-section li::before {
@@ -67,14 +67,13 @@
             left: 0;
         }
 
-        /* CTA Buttons */
         .btn-secondary {
-            display: inline-block; /* Adjust for desktop */
+            display: inline-block;
             background-color: #000;
             color: #fff;
-            font-size: 1.4rem;
-            padding: 15px 25px;
-            margin: 20px auto;
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            margin-top: 20px;
             border-radius: 8px;
             text-align: center;
             text-decoration: none;
@@ -101,8 +100,8 @@
 
         .search-bar {
             width: 100%;
-            padding: 12px 15px;
-            font-size: 1rem;
+            padding: 15px;
+            font-size: 1.1rem;
             border: 1px solid #ddd;
             border-radius: 25px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -118,9 +117,9 @@
         }
 
         .result {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             line-height: 1.4;
-            padding: 5px;
+            padding: 10px;
             background-color: rgba(255, 255, 255, 0.95);
             text-align: left;
         }
@@ -164,7 +163,6 @@
         .result p {
             font-size: 1rem;
             color: #545454;
-            margin-top:-3px
         }
 
         /* Star Rating */
@@ -185,6 +183,18 @@
             color: #5f6368;
         }
 
+        /* Gradient Overlay */
+        .results-container::after {
+            content: "";
+            position: absolute;
+            top: 100px; /* Starts after the first search result */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 100px);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
+            pointer-events: none;
+        }
+
         /* Centered Bold Text */
         .bold-text {
             text-align: center;
@@ -196,104 +206,4 @@
         /* Responsive Button */
         @media (max-width: 768px) {
             .btn-secondary {
-                display: block;
                 width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Logo -->
-    <img src="1s.svg" alt="1s Logo" class="logo">
-
-    <!-- Top Section -->
-    <div class="center-section">
-        <h1>Become the #1 choice in Your industry.</h1>
-        <ul>
-            <li>Appear at the top of Google in your city</li>
-            <li>Get 5-10 new booked patients per week</li>
-            <li>Guaranteed exclusivity and results</li>
-        </ul>
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" class="search-bar" value="best plastic surgeon near me" readonly>
-    </div>
-
-    <!-- Search Results -->
-    <div class="results-container">
-        <!-- Top Result -->
-        <div class="result">
-            <div class="result-header">
-                <img src="1s.svg" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
-                    <div class="url">https://bestplasticsurgery.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
-            <div class="star-rating">
-                <div class="stars">★★★★★</div>
-                <span>5.0 (999 reviews)</span>
-            </div>
-            <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
-        </div>
-
-        <!-- Competitor Results -->
-        <div class="result">
-            <div class="result-header">
-                <img src="IMG_6409.jpg" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Smith Plastic Surgery Clinic</div>
-                    <div class="url">https://smithsurgery.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-            <p>Providing standard services but losing patients to more experienced surgeons.</p>
-        </div>
-
-        <div class="result">
-            <div class="result-header">
-                <img src="IMG_6409.jpg" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Anderson Aesthetic Center</div>
-                    <div class="url">https://andersonaesthetics.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
-        </div>
-
-        <!-- New Competitor Result -->
-        <div class="result">
-            <div class="result-header">
-                <img src="IMG_6409.jpg" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Taylor Cosmetic Clinic</div>
-                    <div class="url">https://taylorclinic.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Cosmetic Procedures on a Budget</a>
-            <p>Patients look for affordability, but they still prefer trusted surgeons like Dr. Your Name Here.</p>
-        </div>
-    </div>
-
-    <!-- Centered Bold Text -->
-    <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
-
-    <!-- Repeated Section -->
-    <div class="center-section">
-        <h1>Become the #1 choice in Your industry.</h1>
-        <ul>
-            <li>Appear at the top of Google in your city</li>
-            <li>Get 5-10 new booked patients per week</li>
-            <li>Guaranteed exclusivity and results</li>
-        </ul>
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
-        <div class="button-text-below">I want to be number #1 and fully booked year round</div>
-    </div>
-</body>
-</html>
-
