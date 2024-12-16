@@ -19,6 +19,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
+            position: relative;
         }
 
         /* Logo Styling */
@@ -85,7 +86,7 @@
             max-width: 600px;
             margin: 0 auto 30px;
             text-align: center;
-            padding: 0 15px; /* Even spacing on mobile */
+            padding: 0 15px;
         }
 
         .search-bar {
@@ -103,11 +104,15 @@
         .results-container {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
         }
 
         .result {
             margin-bottom: 30px;
             line-height: 1.4;
+            position: relative;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.95); /* Default background */
         }
 
         .result-header {
@@ -139,7 +144,7 @@
             font-size: 20px;
             font-weight: regular;
             color: #1a0dab;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             text-decoration: none;
             display: block;
         }
@@ -153,7 +158,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 5px;
-            margin-top: -2px;
         }
 
         .star-rating .stars {
@@ -170,7 +174,18 @@
         .result p {
             font-size: 1rem;
             color: #545454;
-            margin-top:-2px;
+        }
+
+        /* Gradient Overlay */
+        .results-container::after {
+            content: "";
+            position: absolute;
+            top: 100px; /* Starts after the first search result */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 100px);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
+            pointer-events: none; /* Prevents overlay from blocking content */
         }
     </style>
 </head>
@@ -213,7 +228,7 @@
             <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
         </div>
 
-        <!-- Competitor Result 1 -->
+        <!-- Competitor Results -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -223,10 +238,9 @@
                 </div>
             </div>
             <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-            <p>Providing standard services but losing patients to more experienced surgeons in Beverly Hills.</p>
+            <p>Providing standard services but losing patients to more experienced surgeons.</p>
         </div>
 
-        <!-- Competitor Result 2 -->
         <div class="result">
             <div class="result-header">
                 <img src="IMG_6409.jpg" alt="Thumbnail">
@@ -236,7 +250,31 @@
                 </div>
             </div>
             <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but patients still choose Dr. Your Name Here for exceptional results.</p>
+            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here.</p>
+        </div>
+
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Johnson Cosmetic Surgery</div>
+                    <div class="url">https://johnsoncosmetics.com</div>
+                </div>
+            </div>
+            <a href="#" class="result-title">Quality Plastic Procedures</a>
+            <p>Our team delivers reliable results but struggles to compete with top providers.</p>
+        </div>
+
+        <div class="result">
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Taylor Plastic Clinic</div>
+                    <div class="url">https://taylorclinic.com</div>
+                </div>
+            </div>
+            <a href="#" class="result-title">Standard Cosmetic Surgery</a>
+            <p>Decent reviews, but not as trusted as Dr. Your Name Here.</p>
         </div>
     </div>
 
