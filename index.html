@@ -114,22 +114,22 @@
         }
 
         .result {
-            display: flex;
-            align-items: flex-start;
             margin-bottom: 30px;
             line-height: 1.4;
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
         }
 
         .result img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            margin-right: 15px;
+            margin-right: 10px;
             object-fit: cover;
-        }
-
-        .result-content {
-            flex: 1;
         }
 
         .result a {
@@ -152,6 +152,7 @@
         .result p {
             font-size: 1rem;
             color: #545454;
+            margin-left: 50px; /* Align text with titles */
         }
 
         /* Bottom CTA */
@@ -185,32 +186,38 @@
     <div class="results-container">
         <!-- Result 1 -->
         <div class="result">
-            <img src="IMG_6407.PNG" alt="Thumbnail">
-            <div class="result-content">
-                <a href="https://bestplasticsurgery.com" target="_blank">Dr. Your Name Here - Best Plastic Surgery in Beverly Hills</a>
-                <div class="url">https://bestplasticsurgery.com</div>
-                <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
+            <div class="result-header">
+                <img src="IMG_6407.PNG" alt="Thumbnail">
+                <div>
+                    <a href="https://bestplasticsurgery.com" target="_blank">Dr. Your Name Here - Best Plastic Surgery in Beverly Hills</a>
+                    <div class="url">https://bestplasticsurgery.com</div>
+                </div>
             </div>
+            <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
         </div>
 
-        <!-- Competitor 1 -->
+        <!-- Competitor Result 1 -->
         <div class="result">
-            <img src="IMG_6409.jpg" alt="Thumbnail">
-            <div class="result-content">
-                <a href="#">Smith Plastic Surgery Clinic</a>
-                <div class="url">https://smithsurgery.com</div>
-                <p>We’re on page one but still can’t get enough patients. Everyone goes to Dr. Your Name Here.</p>
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div>
+                    <a href="#">Smith Plastic Surgery Clinic</a>
+                    <div class="url">https://smithsurgery.com</div>
+                </div>
             </div>
+            <p>We’re on page one but still can’t get enough patients. Everyone goes to Dr. Your Name Here.</p>
         </div>
 
-        <!-- Competitor 2 -->
+        <!-- Competitor Result 2 -->
         <div class="result">
-            <img src="IMG_6409.jpg" alt="Thumbnail">
-            <div class="result-content">
-                <a href="#">Anderson Aesthetic Center</a>
-                <div class="url">https://andersonaesthetics.com</div>
-                <p>Despite great reviews, patients still prefer Dr. Your Name Here for their plastic surgery needs.</p>
+            <div class="result-header">
+                <img src="IMG_6409.jpg" alt="Thumbnail">
+                <div>
+                    <a href="#">Anderson Aesthetic Center</a>
+                    <div class="url">https://andersonaesthetics.com</div>
+                </div>
             </div>
+            <p>Despite great reviews, patients still prefer Dr. Your Name Here for their plastic surgery needs.</p>
         </div>
     </div>
 
