@@ -3,99 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Search Results - Best Plastic Surgeon</title>
+    <title>Search Results - Best Plastic Surgeon</title>
     <style>
         /* General Reset */
-        body, h1, h2, h3, p, a {
+        body, h1, h2, ul, li, button, input {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            border: 0;
             font-family: Arial, sans-serif;
         }
 
         body {
             background-color: #fff;
-            color: #202124;
+            color: #000;
             line-height: 1.6;
+            margin: 0;
             padding: 20px;
         }
 
-        /* Header Search Bar */
-        .search-container {
+        /* Centered Section */
+        .center-section {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .center-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .center-section ul {
+            list-style: none;
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .center-section li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .center-section li::before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Simulated Google Search Section */
+        .search-container {
+            margin: 0 auto 40px;
+            max-width: 600px;
+            text-align: center;
         }
 
         .search-bar {
-            width: 90%;
-            max-width: 600px;
-            padding: 10px 15px;
+            width: 100%;
+            padding: 10px;
             font-size: 1rem;
-            border: 1px solid #dfe1e5;
-            border-radius: 24px;
-            outline: none;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
 
-        .search-bar:focus {
-            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+        .results-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
         }
 
-        /* Search Results Section */
-        .search-result {
-            margin-bottom: 25px;
-            font-size: 0.9rem;
+        .result {
+            margin-bottom: 30px;
+            line-height: 1.4;
         }
 
-        .search-result a {
+        .result a {
             color: #1a0dab;
             font-size: 1.2rem;
+            font-weight: bold;
             text-decoration: none;
         }
 
-        .search-result a:hover {
+        .result a:hover {
             text-decoration: underline;
         }
 
-        .search-result .url {
+        .result .url {
             color: #006621;
             font-size: 0.9rem;
-            margin: 5px 0;
+            margin-bottom: 5px;
         }
 
-        .search-result p {
-            font-size: 0.9rem;
-            color: #4d5156;
-            margin-top: 5px;
+        .result p {
+            font-size: 1rem;
+            color: #545454;
         }
     </style>
 </head>
 <body>
+    <!-- Top Section -->
+    <div class="center-section">
+        <h1>Become the #1 choice in Your industry.</h1>
+        <ul>
+            <li>Appear at the top of Google in your city</li>
+            <li>Get 5-10 new booked patients per week</li>
+            <li>Guaranteed exclusivity and results</li>
+        </ul>
+        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn">Get in touch</a>
+    </div>
 
-    <!-- Search Bar -->
+    <!-- Simulated Google Search Section -->
     <div class="search-container">
-        <input type="text" class="search-bar" value="best plastic surgeon near me" readonly>
+        <input type="text" class="search-bar" placeholder="best plastic surgeon near me" value="best plastic surgeon near me" disabled>
     </div>
 
-    <!-- Search Result 1 -->
-    <div class="search-result">
-        <a href="https://bestplasticsurgery.com">Dr. Your Name Here - Best Plastic Surgery in Beverly Hills</a>
-        <div class="url">https://bestplasticsurgery.com</div>
-        <p>Dr. Your Name Here, MD, FACS, is the best plastic surgeon in Beverly Hills, specializing in transformative cosmetic surgery that enhances natural beauty.</p>
-    </div>
+    <!-- Search Results -->
+    <div class="results-container">
+        <!-- Result 1 -->
+        <div class="result">
+            <a href="https://bestplasticsurgery.com" target="_blank">
+                Dr. Your Name Here - Best Plastic Surgery in Beverly Hills
+            </a>
+            <div class="url">https://bestplasticsurgery.com</div>
+            <p>
+                Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery. Book your consultation today.
+            </p>
+        </div>
 
-    <!-- Search Result 2 -->
-    <div class="search-result">
-        <a href="https://bestplasticsurgery.com">Dr. Your Name Here - Best Plastic Surgery in Newport Beach</a>
-        <div class="url">https://bestplasticsurgery.com</div>
-        <p>Dr. Your Name Here, MD, FACS, provides exceptional plastic surgery in Newport Beach, offering expert care and remarkable results for patients.</p>
-    </div>
+        <!-- Result 2 -->
+        <div class="result">
+            <a href="https://bestplasticsurgery.com" target="_blank">
+                Dr. Your Name Here - Top Plastic Surgeon in Los Angeles
+            </a>
+            <div class="url">https://bestplasticsurgery.com</div>
+            <p>
+                Dr. Your Name Here, MD FACS, is the top-rated plastic surgeon serving Los Angeles with unparalleled expertise and guaranteed patient satisfaction.
+            </p>
+        </div>
 
-    <!-- Search Result 3 -->
-    <div class="search-result">
-        <a href="https://bestplasticsurgery.com">Dr. Your Name Here - Best Plastic Surgery in Los Angeles</a>
-        <div class="url">https://bestplasticsurgery.com</div>
-        <p>Dr. Your Name Here, MD, FACS, is renowned for delivering the best plastic surgery in Los Angeles, combining skill, artistry, and patient-centered care.</p>
+        <!-- Result 3 -->
+        <div class="result">
+            <a href="https://bestplasticsurgery.com" target="_blank">
+                Dr. Your Name Here - Expert Plastic Surgery in Orange County
+            </a>
+            <div class="url">https://bestplasticsurgery.com</div>
+            <p>
+                Located in Orange County, Dr. Your Name Here is a board-certified plastic surgeon offering world-class cosmetic procedures and beautiful results.
+            </p>
+        </div>
     </div>
-
 </body>
 </html>
