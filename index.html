@@ -49,7 +49,7 @@
             list-style: none;
             text-align: left;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             padding: 0;
         }
 
@@ -86,6 +86,13 @@
             opacity: 0.8;
         }
 
+        .button-text-below {
+            font-size: 1rem;
+            color: #5f6368;
+            margin-top: 5px;
+            text-align: center;
+        }
+
         /* Search Bar */
         .search-container {
             max-width: 600px;
@@ -109,6 +116,22 @@
             max-width: 800px;
             margin: 0 auto;
             position: relative;
+        }
+
+        .results-container::after {
+            content: "";
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 120px);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
+            pointer-events: none;
+        }
+
+        .results-content {
+            position: relative;
+            z-index: 1;
         }
 
         .result {
@@ -163,6 +186,24 @@
             margin: 0;
         }
 
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .star-rating .stars {
+            color: #fdd663;
+            font-size: 1rem;
+        }
+
+        .star-rating span {
+            margin-left: 5px;
+            font-size: 0.9rem;
+            color: #5f6368;
+        }
+
         /* Footer Section */
         .bold-text {
             text-align: center;
@@ -175,18 +216,6 @@
             margin-top: -50px;
             z-index: 2;
             position: relative;
-        }
-
-        /* Gradient Overlay */
-        .results-container::after {
-            content: "";
-            position: absolute;
-            top: 120px;
-            left: 0;
-            width: 100%;
-            height: calc(100% - 120px);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
-            pointer-events: none;
         }
     </style>
 </head>
@@ -212,57 +241,52 @@
 
     <!-- Search Results -->
     <div class="results-container">
-        <div class="result">
-            <div class="result-header">
-                <img src="1s.svg" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
-                    <div class="url">https://bestplasticsurgery.com</div>
+        <div class="results-content">
+            <!-- Top Result -->
+            <div class="result">
+                <div class="result-header">
+                    <img src="1s.svg" alt="Thumbnail">
+                    <div class="result-info">
+                        <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
+                        <div class="url">https://bestplasticsurgery.com</div>
+                    </div>
                 </div>
+                <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
+                <div class="star-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>5.0 (999 reviews)</span>
+                </div>
+                <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
             </div>
-            <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
-            <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
-        </div>
 
-        <div class="result">
-            <div class="result-header">
-                <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Losing Plastic Surgery Clinic</div>
-                    <div class="url">https://losingsurgeryclients.com</div>
+            <!-- Competitor Result -->
+            <div class="result">
+                <div class="result-header">
+                    <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
+                    <div class="result-info">
+                        <div class="practice-name">Losing Plastic Surgery Clinic</div>
+                        <div class="url">https://losingsurgeryclients.com</div>
+                    </div>
                 </div>
+                <a href="#" class="result-title">Generic Plastic Surgery Services</a>
+                <p>Providing standard services but patients still prefer Dr. Your Name Here.</p>
             </div>
-            <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-            <p>Providing standard services but patients still prefer Dr. Your Name Here.</p>
-        </div>
-        
-        <div class="result">
-            <div class="result-header">
-                <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Nobody Cares Aesthetic Center</div>
-                    <div class="url">https://nobodycaresaesthetics.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but losing patients to more experienced surgeons in Beverly Hills.</p>
-        </div>
-        <div class="result">
-            <div class="result-header">
-                <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Anderson Aesthetic Center</div>
-                    <div class="url">https://andersonaesthetics.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but patients still prefer Dr. Your Name Here for exceptional results.</p>
         </div>
     </div>
 
-    <!-- Bottom CTA -->
+    <!-- Bottom CTA Section -->
     <div class="footer-content">
         <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
+        <div class="center-section">
+            <h1>Become the #1 choice in Your industry.</h1>
+            <ul>
+                <li>Appear at the top of Google in your city</li>
+                <li>Get 5-10 new booked patients per week</li>
+                <li>Guaranteed exclusivity and results</li>
+            </ul>
+            <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
+            <div class="button-text-below">I want to be number #1 and fully booked year round</div>
+        </div>
     </div>
 </body>
 </html>
