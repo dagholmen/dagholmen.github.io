@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
     <title>Search Results - Best Plastic Surgeon</title>
     <style>
         /* General Reset */
@@ -42,15 +41,16 @@
         .center-section h1 {
             font-size: 2.5rem;
             font-weight: bold;
-            line-height: 1;
+            line-height: 1.1;
             margin-bottom: 20px;
         }
 
         .center-section ul {
             list-style: none;
-            display: inline-block;
             text-align: left;
-            margin-bottom: 0px;
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 0;
         }
 
         .center-section li {
@@ -90,7 +90,6 @@
         .search-container {
             max-width: 600px;
             margin: 0 auto 30px;
-            text-align: center;
             padding: 0 15px;
         }
 
@@ -113,20 +112,22 @@
         }
 
         .result {
-            margin-bottom: 5px; /* Reduced spacing between results */
-            line-height: 1.4;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.95); /* Default background */
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         .result-header {
             display: flex;
             align-items: center;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        .result  {
+        .result-header img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -136,7 +137,6 @@
 
         .result-info .practice-name {
             font-size: 14px;
-            font-weight: regular;
             margin-bottom: 3px;
         }
 
@@ -147,9 +147,8 @@
 
         .result-title {
             font-size: 20px;
-            font-weight: regular;
             color: #1a0dab;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             text-decoration: none;
             display: block;
         }
@@ -158,28 +157,10 @@
             text-decoration: underline;
         }
 
-        /* Star Rating */
-        .star-rating {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .star-rating .stars {
-            color: #fdd663;
-            font-size: 1rem;
-        }
-
-        .star-rating span {
-            margin-left: 5px;
-            font-size: 0.9rem;
-            color: #5f6368;
-        }
-
         .result p {
             font-size: 1rem;
             color: #545454;
-            margin-top:-3px;
+            margin: 0;
         }
 
         /* Footer Section */
@@ -188,11 +169,10 @@
             font-weight: bold;
             font-size: 1.4rem;
             margin: 30px 0;
-            z-index: 2;
         }
 
         .footer-content {
-            margin-top: -100px; /* Overlaps the last result */
+            margin-top: -50px;
             z-index: 2;
             position: relative;
         }
@@ -201,12 +181,12 @@
         .results-container::after {
             content: "";
             position: absolute;
-            top: 100px; /* Starts after the first search result */
+            top: 120px;
             left: 0;
             width: 100%;
-            height: calc(100% - 100px);
+            height: calc(100% - 120px);
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
-            pointer-events: none; /* Prevents overlay from blocking content */
+            pointer-events: none;
         }
     </style>
 </head>
@@ -232,7 +212,6 @@
 
     <!-- Search Results -->
     <div class="results-container">
-        <!-- Top Result -->
         <div class="result">
             <div class="result-header">
                 <img src="1s.svg" alt="Thumbnail">
@@ -241,15 +220,10 @@
                     <div class="url">https://bestplasticsurgery.com</div>
                 </div>
             </div>
-            <a href="https://bestplasticsurgery.com" target="_blank" class="result-title">Best Plastic Surgery in Beverly Hills</a>
-            <div class="star-rating">
-                <div class="stars">★★★★★</div>
-                <span>5.0 (999 reviews)</span>
-            </div>
-            <p>Dr. Your Name Here, MD FACS, is the best plastic surgeon in Beverly Hills, delivering exceptional results in cosmetic surgery.</p>
+            <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
+            <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
         </div>
 
-        <!-- Competitor Result 1 -->
         <div class="result">
             <div class="result-header">
                 <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
@@ -259,10 +233,9 @@
                 </div>
             </div>
             <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-            <p>Providing standard services but but patients still prefer Dr. Your Name Here for exceptional results.</p>
+            <p>Providing standard services but patients still prefer Dr. Your Name Here.</p>
         </div>
-
-        <!-- Competitor Result 2 -->
+        
         <div class="result">
             <div class="result-header">
                 <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail">
@@ -274,8 +247,6 @@
             <a href="#" class="result-title">Affordable Plastic Surgery</a>
             <p>We offer budget-friendly options, but losing patients to more experienced surgeons in Beverly Hills.</p>
         </div>
-
-        <!-- Competitor Result 3 -->
         <div class="result">
             <div class="result-header">
                 <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
@@ -290,21 +261,8 @@
     </div>
 
     <!-- Bottom CTA -->
-
     <div class="footer-content">
         <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
     </div>
-
-    <div class="center-section">
-        <h1>Become the #1 choice in Your industry.</h1>
-        <ul>
-            <li>Appear at the top of Google in your city</li>
-            <li>Get 5-10 new booked patients per week</li>
-            <li>Guaranteed exclusivity and results</li>
-        </ul>
-        <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">Get in touch</a>
-        <div class="button-text-below">I want to be number #1 and fully booked year round</div>
-    </div>
-
 </body>
 </html>
