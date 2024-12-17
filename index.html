@@ -22,7 +22,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            position: relative;
         }
 
         /* Logo Styling */
@@ -106,7 +105,6 @@
             font-size: 1rem;
             border: 1px solid #ddd;
             border-radius: 25px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
             outline: none;
             box-sizing: border-box;
         }
@@ -121,33 +119,25 @@
         .results-container::after {
             content: "";
             position: absolute;
-            top: 120px;
+            top: 100px;
             left: 0;
             width: 100%;
-            height: calc(100% - 120px);
+            height: calc(100% - 100px);
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
             pointer-events: none;
         }
 
-        .results-content {
-            position: relative;
-            z-index: 1;
-        }
-
         .result {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
+            line-height: 1.4;
+            position: relative;
             padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
 
         .result-header {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .result-header img {
@@ -171,7 +161,7 @@
         .result-title {
             font-size: 20px;
             color: #1a0dab;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             text-decoration: none;
             display: block;
         }
@@ -180,13 +170,6 @@
             text-decoration: underline;
         }
 
-        .result p {
-            font-size: 1rem;
-            color: #545454;
-            margin: 0;
-        }
-
-        /* Star Rating */
         .star-rating {
             display: flex;
             align-items: center;
@@ -204,6 +187,12 @@
             color: #5f6368;
         }
 
+        .result p {
+            font-size: 1rem;
+            color: #545454;
+            margin-top: -3px;
+        }
+
         /* Footer Section */
         .bold-text {
             text-align: center;
@@ -214,8 +203,8 @@
 
         .footer-content {
             margin-top: -50px;
-            z-index: 2;
             position: relative;
+            z-index: 2;
         }
     </style>
 </head>
@@ -241,40 +230,64 @@
 
     <!-- Search Results -->
     <div class="results-container">
-        <div class="results-content">
-            <!-- Top Result -->
-            <div class="result">
-                <div class="result-header">
-                    <img src="1s.svg" alt="Thumbnail">
-                    <div class="result-info">
-                        <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
-                        <div class="url">https://bestplasticsurgery.com</div>
-                    </div>
+        <!-- Top Result -->
+        <div class="result">
+            <div class="result-header">
+                <img src="1s.svg" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
+                    <div class="url">https://bestplasticsurgery.com</div>
                 </div>
-                <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
-                <div class="star-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>5.0 (999 reviews)</span>
-                </div>
-                <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
             </div>
+            <a href="#" class="result-title">Best Plastic Surgery in Beverly Hills</a>
+            <div class="star-rating">
+                <div class="stars">★★★★★</div>
+                <span>5.0 (999 reviews)</span>
+            </div>
+            <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
+        </div>
 
-            <!-- Competitor Result -->
-            <div class="result">
-                <div class="result-header">
-                    <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
-                    <div class="result-info">
-                        <div class="practice-name">Losing Plastic Surgery Clinic</div>
-                        <div class="url">https://losingsurgeryclients.com</div>
-                    </div>
+        <!-- Competitor Result 1-->
+        <div class="result">
+            <div class="result-header">
+                <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Losing Plastic Surgery Clinic</div>
+                    <div class="url">https://losingsurgeryclients.com</div>
                 </div>
-                <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-                <p>Providing standard services but patients still prefer Dr. Your Name Here.</p>
             </div>
+            <a href="#" class="result-title">Generic Plastic Surgery Services</a>
+            <p>Providing standard services but patients still prefer Dr. Your Name Here.</p>
+        </div>
+
+        <!-- Competitor Result 2-->
+        <div class="result">
+            <div class="result-header">
+                <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Nobody Cares Aesthetic Center</div>
+                    <div class="url">https://nobodycaresaesthetics.com</div>
+                </div>
+            </div>
+            <a href="#" class="result-title">Affordable Plastic Surgery</a>
+            <p>We offer budget-friendly options, but losing patients to more experienced surgeons.</p>
+        </div>
+        
+        <!-- Competitor Result 3-->
+        <div class="result">
+            <div class="result-header">
+                <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail">
+                <div class="result-info">
+                    <div class="practice-name">Nobody Cares Aesthetic Center</div>
+                    <div class="url">https://nobodycaresaesthetics.com</div>
+                </div>
+            </div>
+            <a href="#" class="result-title">Affordable Plastic Surgery</a>
+            <p>We offer budget-friendly options, but losing patients to more experienced surgeons.</p>
         </div>
     </div>
 
-    <!-- Bottom CTA Section -->
+    <!-- Bottom CTA -->
     <div class="footer-content">
         <div class="bold-text">NOBODY CARES UNLESS YOU'RE #1</div>
         <div class="center-section">
