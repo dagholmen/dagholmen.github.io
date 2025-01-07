@@ -253,6 +253,19 @@
             max-width: 500px;
             margin: 0 auto;
         }
+
+        .video-wrapper {
+    max-height: 300px; /* Restrict video height */
+    overflow: hidden; /* Clip anything exceeding the max height */
+    margin: 0 auto 20px; /* Center the videos and add spacing between them */
+}
+
+.video-wrapper wistia-player {
+    width: 100%;
+    height: auto; /* Preserve aspect ratio */
+    max-height: 300px; /* Enforce height limit */
+}
+
         
     </style>
 </head>
@@ -347,9 +360,50 @@
         <div class="bold-text">Patients only choose the TOP results.</div>
         <div class="video-section">
             <h3>"Don't wait. You're wasting good sales that you could be getting. Call them now!"</h3>
-        <div class="video-container">
-            <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/sp38trfs0i.js" async type="module"></script><style>wistia-player[media-id='sp38trfs0i']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/sp38trfs0i/swatch'); display: block; filter: blur(5px); padding-top:55.94%; }</style> <wistia-player media-id="sp38trfs0i"></wistia-player>
-        </div>
+        <!-- Video 1 -->
+<div class="video-wrapper">
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/z6s0542eze.js" async type="module"></script>
+    <style>
+        wistia-player[media-id='z6s0542eze']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z6s0542eze/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+        }
+    </style>
+    <wistia-player media-id="z6s0542eze"></wistia-player>
+</div>
+
+<!-- Video 2 -->
+<div class="video-wrapper">
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/mm4kwy9wll.js" async type="module"></script>
+    <style>
+        wistia-player[media-id='mm4kwy9wll']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/mm4kwy9wll/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 56.25%;
+        }
+    </style>
+    <wistia-player media-id="mm4kwy9wll"></wistia-player>
+</div>
+
+<!-- Video 3 -->
+<div class="video-wrapper">
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/sp38trfs0i.js" async type="module"></script>
+    <style>
+        wistia-player[media-id='sp38trfs0i']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/sp38trfs0i/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 55.94%;
+        }
+    </style>
+    <wistia-player media-id="sp38trfs0i"></wistia-player>
+</div>
     </div>
         <div class="center-section">
             <h1>Become the #1 Choice in Your City.</h1>
