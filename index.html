@@ -7,534 +7,489 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Add Font Awesome (optional) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Title -->
-    <title>#1 Google Search Placement</title>
-
-    <!-- CSS -->
-    <style>
-        /* Define Custom Font for H1-H3 */
-        @font-face {
-            font-family: 'BethanyElingston';
-            src: url('https://raw.githubusercontent.com/yourusername/yourrepo/main/assets/fonts/BethanyElingston.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-    
-        /* Set General Body Font to Poppins */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fff;
-            color: #000;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-
-        /* Limit Content Width */
-        .page-container {
-            max-width: 850px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-    
-        /* Apply Custom Font to Headings */
-        h1, h2, h3 {
-            font-family: 'BethanyElingston', sans-serif;
-        }
-    
-        /* Poppins for H4, H5, and Other Body Text */
-        h4, h5, p, ul, li, button, input {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Remove Default Margins for Body and Headings */
-        body, h1, h2, h3, h4, h5, ul, li, button, input {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
-
-
-        /* Logo Styling */
-        .logo {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        /* Top Section */
-        .center-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .center-section h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .center-section ul {
-            list-style: none;
-            text-align: left;
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 0;
-        }
-
-        .center-section li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .center-section li::before {
-            content: "•";
-            color: #000;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .button-container {
-            text-align: center;
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            max-width: 300px;
-            background-color: #000;
-            color: #fff;
-            font-size: 1.4rem;
-            padding: 15px 25px;
-            margin: 0px auto 0;
-            border-radius: 8px;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .btn-secondary i {
-            transform: scaleX(-1); /* Flips the icon horizontally */
-        }
-        
-        .btn-secondary:hover {
-            opacity: 0.8;
-        }
-
-        .button-text-below {
-            font-size: 1rem;
-            color: #5f6368;
-            margin-top: 10px;
-            text-align: center;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        /* Search Bar */
-        .search-container {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            padding: 0 15px;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 12px 15px;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            outline: none;
-            box-sizing: border-box;
-        }
-
-        /* Search Results */
-        .results-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .results-container::after {
-            content: "";
-            position: absolute;
-            top: 100px;
-            left: 0;
-            width: 100%;
-            height: calc(100% - 100px);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1) 100%);
-            pointer-events: none;
-        }
-
-        .result {
-            margin-bottom: 5px;
-            line-height: 1.4;
-            position: relative;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        .result-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .result-header img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-            object-fit: cover;
-        }
-
-        .result-info .practice-name {
-            font-size: 14px;
-            margin-bottom: 3px;
-        }
-
-        .result-info .url {
-            color: #006621;
-            font-size: 0.9rem;
-        }
-
-        .result-title {
-            font-size: 20px;
-            color: #1a0dab;
-            margin-bottom: 5px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .result-title:hover {
-            text-decoration: underline;
-        }
-
-        .star-rating {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .star-rating .stars {
-            color: #fdd663;
-            font-size: 1rem;
-        }
-
-        .star-rating span {
-            margin-left: 5px;
-            font-size: 0.9rem;
-            color: #5f6368;
-        }
-
-        .result p {
-            font-size: 1rem;
-            color: #545454;
-            margin-top: -3px;
-        }
-
-        .top-result-title {
-            font-weight: bold;
-        }
-
-
-        /* Footer Section */
-        .bold-text {
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.7rem;
-            margin: 30px 0;
-            color: #bf2121;
-        }
-
-        .footer-content {
-            margin-top: -50px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .video-section {
-            text-align: center;
-            margin: 40px auto;
-            max-width: 500px;
-        }
-
-        .video-section h2 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .video-container {
-            max-width: 500px;
-            margin: 0 auto;
-         }
-
-        .results2-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #fff; /* Removed gray background */
-        }
-    
-        .results2-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .results2-section p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
-        }
-    
-        .results2-container {
-            display: flex; /* Use flexbox for centering */
-            flex-wrap: wrap; /* Allow wrapping */
-            justify-content: center; /* Center horizontally */
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-           padding: 0;
-        }
-        
-        .result2-item {
-            background: none; /* Remove gray background */
-            border: none; /* Remove border */
-            border-radius: 0; /* Remove border radius */
-            padding: 0; /* Remove padding */
-            text-align: center;
-            box-shadow: none; /* Remove box shadow */
-        }
-        
-        .result2-item img {
-            width: 100%;
-            max-width: 600px; /* Limit maximum width for readability */
-            height: auto; /* Maintain aspect ratio */
-            margin: 0 auto 15px; /* Center the image */
-        }
-    
-        .result2-item p {
-            font-size: 1rem;
-            color: #333;
-            margin-top: 10px;
-        }
-   </style>
-    
+    <title>#1 Google Search Placement</title>   
 </head>
 <body>
-  <div class="page-container">
-    <!-- Logo -->
-    <img src="1s.svg" alt="1s Logo" class="logo" width="100" height="100">
 
-    <!-- Top Section -->
-    <div class="center-section">
-        <h1>Become the #1 Choice in Your City.</h1>
-        <ul>
-            <li>Appear at the top of Google in your city</li>
-            <li>Get 5-10 new paying customers per week</li>
-            <li>Guaranteed results and exclusivity</li>
-        </ul>
-        <div class="button-container">
-            <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">
-                <i class="fas fa-phone-alt"></i> Schedule a Call
-            </a>
-        </div>
-    </div>
+    <div class="page-container">
 
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" class="search-bar" readonly>
-    </div>
-
-    <!-- Search Results -->
-    <div class="results-container">
-        <!-- Top Result -->
-        <div class="result">
-            <div class="result-header">
-                <img src="1s.svg" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Dr. Your Name Here Plastic Surgery</div>
-                    <div class="url">https://yourwebsitehere.com</div>
-                </div>
-            </div>
-                <a href="https://bestplasticsurgery.com" target="_blank" class="result-title top-result-title">
-                    Best Plastic Surgery in New York
-                </a>
-            <div class="star-rating">
-                <div class="stars">★★★★★</div>
-                <span>5.0 (999 reviews)</span>
-            </div>
-            <p>Dr. Your Name Here, MD FACS, delivers exceptional results in cosmetic surgery.</p>
-        </div>
-
-        <!-- Competitor Result 1-->
-        <div class="result">
-            <div class="result-header">
-                <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Losing Plastic Surgery Clinic</div>
-                    <div class="url">https://losingsurgeryclients.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Generic Plastic Surgery Services</a>
-            <p>Providing standard services but patients still prefer Dr. Your Name Here.</p>
-        </div>
-
-        <!-- Competitor Result 2-->
-        <div class="result">
-            <div class="result-header">
-                <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Nobody Cares Aesthetic Center</div>
-                    <div class="url">https://nobodycaresaesthetics.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but losing patients to more experienced surgeons.</p>
-        </div>
-        
-        <!-- Competitor Result 3-->
-        <div class="result">
-            <div class="result-header">
-                <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail">
-                <div class="result-info">
-                    <div class="practice-name">Nobody Cares 2 Aesthetic Center</div>
-                    <div class="url">https://nobodycares2aesthetics.com</div>
-                </div>
-            </div>
-            <a href="#" class="result-title">Affordable Plastic Surgery</a>
-            <p>We offer budget-friendly options, but losing patients to more experienced surgeons.</p>
-        </div>
-    </div>
-
-        <!-- Bottom CTA -->
-    <div class="footer-content">
-        <div class="bold-text">People only choose the TOP results.</div>
-        <div class="video-section">
-            <h3>"Don't wait. You're wasting good sales that you could be getting. Call them now!"</h3>
-        <!-- Video 1 -->
-    <div class="video-wrapper">
-        <script src="https://fast.wistia.com/player.js" async></script>
-        <script src="https://fast.wistia.com/embed/z6s0542eze.js" async type="module"></script>
-        <style>
-            wistia-player[media-id='z6s0542eze']:not(:defined) {
-                background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z6s0542eze/swatch');
-                display: block;
-                filter: blur(5px);
-                padding-top: 177.78%;
-            }
-        </style>
-        <wistia-player media-id="z6s0542eze"></wistia-player>
-    </div>
-
-<!-- Video 2 -->
-<div class="video-wrapper">
-    <script src="https://fast.wistia.com/player.js" async></script>
-    <script src="https://fast.wistia.com/embed/mm4kwy9wll.js" async type="module"></script>
-    <style>
-        wistia-player[media-id='mm4kwy9wll']:not(:defined) {
-            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/mm4kwy9wll/swatch');
-            display: block;
-            filter: blur(5px);
-            padding-top: 56.25%;
-        }
-    </style>
-    <wistia-player media-id="mm4kwy9wll"></wistia-player>
-</div>
-
-<!-- Video 3 -->
-<div class="video-wrapper">
-    <script src="https://fast.wistia.com/player.js" async></script>
-    <script src="https://fast.wistia.com/embed/sp38trfs0i.js" async type="module"></script>
-    <style>
-        wistia-player[media-id='sp38trfs0i']:not(:defined) {
-            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/sp38trfs0i/swatch');
-            display: block;
-            filter: blur(5px);
-            padding-top: 55.94%;
-        }
-    </style>
-    <wistia-player media-id="sp38trfs0i"></wistia-player>
-</div>
-            
-<div class="results2-section">
-    <h2>Our Proven Results</h2>
-    <p>See how we've helped our clients rank #1 in their industries.</p>
-
-    <div class="results2-container">
-        <!-- Result 1 -->
-        <div class="result2-item">
-            <img src="screenshot1.webp" alt="Search Result Example">
-            <p>First Page Domination in 30 days!</p>
-        </div>
-        
-        <!-- Result 2 -->
-        <div class="result2-item">
-            <img src="screenshot2.webp" alt="Ranking Example">
-            <p>5 Rankings on first page in 28 days!</p>
-        </div>
-        
-        <!-- Result 3 -->
-        <div class="result2-item">
-            <img src="screenshot3.webp" alt="Keyword Rankings">
-            <p>4 Rankings on first page in 23 days!</p>
-        </div>
-
-        <!-- Result 4 -->
-        <div class="result2-item">
-            <img src="screenshot4.webp" alt="Keyword Rankings Chart">
-            <p>Client dominated first page in 28 days!</p>
-        </div>
-
-        <!-- Result 5 -->
-        <div class="result2-item">
-            <img src="screenshot5.webp" alt="Keyword Trends">
-            <p>12 keywords on first page in 16 days!</p>
-        </div>
-        
-        <!-- Result 6 -->
-        <div class="result2-item">
-            <img src="screenshot6.webp" alt="Keyword Trends">
-            <p>9 keywords on page 1 in 12 days!</p>
-        </div>
-    </div>
-</div>          
-    </div>
-        <div class="center-section">
-            <h1>Become the #1 Choice in Your City.</h1>
-            <ul>
-                <li>Appear at the top of Google in your city</li>
-                <li>Get 5-10 new paying customers per week<</li>
-                <li>Guaranteed results and exclusivity</li>
-            </ul>
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <img src="number-one.svg" alt="Podium Icon" class="hero-icon">
+            <h3 class="hero-subtitle">Helping local businesses for 25 years</h3>
+            <h1>Become the #<u>1 choice</u> in your area</h1>
+            <h4 class="hero-description">We help local businesses dominate their markets by turning them into the go-to choice for high-value jobs.</h4>
             <div class="button-container">
-            <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">
-                <i class="fas fa-phone-alt"></i> Schedule a Call
-            </a>
-
+                <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-secondary">
+                    <i class="fas fa-phone-alt"></i> Book a Call
+                </a>
+            </div>
         </div>
-            <div class="button-text-below">✅ I want to be number #1 and fully booked year round</div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-bar" readonly>
+            </div>
+
+            <!-- Search Results -->
+            <div class="results-container">
+                <!-- Top Result -->
+                <div class="result">
+                    <div class="result-header">
+                        <img src="1s.svg" alt="Thumbnail" class="result-thumbnail">
+                        <div class="result-info">
+                            <div class="practice-name">Your Business Here As The #1 Result</div>
+                            <div class="url">https://yourwebsitehere.com</div>
+                        </div>
+                    </div>
+                    <a href="https://bestplasticsurgery.com" target="_blank" class="result-title top-result-title">
+                        Best #1 Service Provider In Your Area
+                    </a>
+                    <div class="star-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>5.0 (999 reviews)</span>
+                    </div>
+                    <p>Mr. Smart Business owner is the trusted go-to choice in your area.</p>
+                </div>
+
+                <!-- Competitor Result 1-->
+                <div class="result">
+                    <div class="result-header">
+                        <img src="plastic-surgeon-2-unhappy.webp" alt="Thumbnail" class="result-thumbnail">
+                        <div class="result-info">
+                            <div class="practice-name">Competitor Losing Jobs To You</div>
+                            <div class="url">https://losingalotofclients.com</div>
+                        </div>
+                    </div>
+                    <a href="#" class="result-title">Almost as good but not the best</a>
+                    <p>Providing standard services but patients still prefer Mr. Smart Business Owner.</p>
+                </div>
+
+                <!-- Competitor Result 2-->
+                <div class="result">
+                    <div class="result-header">
+                        <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail" class="result-thumbnail">
+                        <div class="result-info">
+                            <div class="practice-name">Nobody Cares About Me Here at #3</div>
+                            <div class="url">https://nobodycaresaboutnumber3.com</div>
+                        </div>
+                    </div>
+                    <a href="#" class="result-title">Affordable Services but not #1</a>
+                    <p>We offer budget-friendly options, but losing patients to more experienced surgeons.</p>
+                </div>
+
+                <!-- Competitor Result 3-->
+                <div class="result">
+                    <div class="result-header">
+                        <img src="plastic-surgeon-3-unhappy.webp" alt="Thumbnail" class="result-thumbnail">
+                        <div class="result-info">
+                            <div class="practice-name">Nobody Cares 2 Aesthetic Center</div>
+                            <div class="url">https://nobodycares2aesthetics.com</div>
+                        </div>
+                    </div>
+                    <a href="#" class="result-title">Affordable Plastic Surgery</a>
+                    <p>We offer budget-friendly options, but losing patients to more experienced surgeons.</p>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
+
+    <div class="page-container">
+
+        <!-- Proof Section -->
+        <div class="proof-section">
+            <h2 class="proof-title">Trusted by industry leaders</h2>
+            <p class="proof-subtitle">And working exclusively with one provider per area</p>
+        </div> 
+    </div>
+
+    <div class="page-container2"></div>
+        
+        <!-- Marquee Section -->
+        <div class="marquee-section">
+            <div class="marquee-content">
+                <img src="Wisdom teeth only.png" alt="Logo 1" class="marquee-logo">
+                <img src="Warburtons.png" alt="Logo 2" class="marquee-logo">
+                <img src="Total care.png" alt="Logo 3" class="marquee-logo">
+                <img src="Smart financial.png" alt="Logo 4" class="marquee-logo">
+                <img src="NM solar.png" alt="Logo 5" class="marquee-logo">
+                <img src="McAfee institute.png" alt="Logo 6" class="marquee-logo">
+                <img src="Beehive assisted living.png" alt="Logo 6" class="marquee-logo">
+                <img src="GOAT.png" alt="Logo 6" class="marquee-logo">
+                <img src="FTF.png" alt="Logo 6" class="marquee-logo">
+                <img src="Directscale.png" alt="Logo 6" class="marquee-logo">
+                <img src="Dahlias hope.png" alt="Logo 6" class="marquee-logo">
+                <img src="COPE.png" alt="Logo 6" class="marquee-logo">
+                <img src="Coba health.png" alt="Logo 6" class="marquee-logo">
+                <img src="Browning associates.png" alt="Logo 6" class="marquee-logo">
+                <img src="Brighter wealth.png" alt="Logo 6" class="marquee-logo">
+                <img src="Beehive homes.png" alt="Logo 6" class="marquee-logo">
+                <img src="Jive.png" alt="Logo 6" class="marquee-logo">
+                <img src="Asset Environmental.png" alt="Logo 6" class="marquee-logo">
+                <!-- Duplicate logos to ensure seamless loop -->
+                <img src="Wisdom teeth only.png" alt="Logo 1" class="marquee-logo">
+                <img src="Warburtons.png" alt="Logo 2" class="marquee-logo">
+                <img src="Total care.png" alt="Logo 3" class="marquee-logo">
+                <img src="Smart financial.png" alt="Logo 4" class="marquee-logo">
+                <img src="NM solar.png" alt="Logo 5" class="marquee-logo">
+                <img src="McAfee institute.png" alt="Logo 6" class="marquee-logo">
+                <img src="Beehive assisted living.png" alt="Logo 6" class="marquee-logo">
+                <img src="GOAT.png" alt="Logo 6" class="marquee-logo">
+                <img src="FTF.png" alt="Logo 6" class="marquee-logo">
+                <img src="Directscale.png" alt="Logo 6" class="marquee-logo">
+                <img src="Dahlias hope.png" alt="Logo 6" class="marquee-logo">
+                <img src="COPE.png" alt="Logo 6" class="marquee-logo">
+                <img src="Coba health.png" alt="Logo 6" class="marquee-logo">
+                <img src="Browning associates.png" alt="Logo 6" class="marquee-logo">
+                <img src="Brighter wealth.png" alt="Logo 6" class="marquee-logo">
+                <img src="Beehive homes.png" alt="Logo 6" class="marquee-logo">
+                <img src="Jive.png" alt="Logo 6" class="marquee-logo">
+                <img src="Asset Environmental.png" alt="Logo 6" class="marquee-logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <div class="video-container">
+            
+                <!-- Video 1 -->
+                <div class="video-wrapper">
+                    <script src="https://fast.wistia.com/player.js" async></script>
+                    <script src="https://fast.wistia.com/embed/mm4kwy9wll.js" async type="module"></script>
+                    <style>
+                        wistia-player[media-id='mm4kwy9wll']:not(:defined) {
+                            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/mm4kwy9wll/swatch');
+                            display: block;
+                            filter: blur(5px);
+                            padding-top: 56.25%;
+                        }
+                    </style>
+                    <wistia-player media-id="mm4kwy9wll"></wistia-player>
+                    <h3>Jamie</h3>
+                    <p>Tree Services</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-wrapper">
+                    <script src="https://fast.wistia.com/player.js" async></script>
+                    <script src="https://fast.wistia.com/embed/0c3pa8yts9.js" async type="module"></script>
+                    <style>
+                        wistia-player[media-id='0c3pa8yts9']:not(:defined) {
+                            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0c3pa8yts9/swatch');
+                            display: block;
+                            filter: blur(5px);
+                            padding-top: 56.25%;
+                        }
+                    </style>
+                    <wistia-player media-id="0c3pa8yts9"></wistia-player>
+                    <h3>Dr. Noot</h3>
+                    <p>Biomimetic Dentist</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-wrapper">
+                    <script src="https://fast.wistia.com/player.js" async></script>
+                    <script src="https://fast.wistia.com/embed/sp38trfs0i.js" async type="module"></script>
+                    <style>
+                        wistia-player[media-id='sp38trfs0i']:not(:defined) {
+                            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/sp38trfs0i/swatch');
+                            display: block;
+                            filter: blur(5px);
+                            padding-top: 56.25%;
+                        }
+                    </style>
+                    <wistia-player media-id="sp38trfs0i"></wistia-player>
+                    <h3>Eric Schetselaar</h3>
+                    <p>Marketing Superstar with DirectScale</p>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Call-to-Action Section -->
+        <div class="cta-section">
+            <h1>Ready to Dominate Your Market?</h1>
+            <p>Thousands of people are searching for your services daily. We’ll make sure they find YOU first.</p>
+        
+            <div class="button-container">
+                <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-cta">
+                    <i class="fas fa-phone-alt"></i> Book a Call
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-container">
+        <!-- How It Works Section -->
+        <div class="how-it-works-section">
+            <div class="image-text-section">
+                <div class="image-container">
+                    <img src="how it works 1.webp" alt="Description" class="how-it-works-image">
+                </div>
+                <div class="text-container">
+                    <h3>Thousands of people are searching for services daily</h3>
+                    <p>Every day, thousands of people urgently search for professionals—roofers, dentists, surgeons—<strong>often in need of immediate help.</strong></p>
+
+                    <p><strong>70% of these searches</strong> go to the top three results on Google. If your business isn’t there, competitors take those jobs.</p>
+
+                    <p>This means missed opportunities, inconsistent income, and growing pressure in a competitive market. Staying invisible online risks your business’s survival. <strong>To succeed, you need to be at the top.</strong></p>
+                </div>
+            </div>
+
+            <!-- Image and Text Section 2 -->
+            <div class="image-text-section-reverse">
+                <div class="text-container">
+                    <h3>We send them straight to the go-to choice in the area - You</h3>
+                    <p><strong>You’ll appear in the top results</strong> for high-value jobs, ensuring your phone rings nonstop with lucrative opportunities.</p>
+
+                    <p>Unlike paid ads, <strong>your #1 organic ranking builds trust and authority</strong> without competitors outspending you.</p>
+
+                    <p><strong>You’ll see results quickly</strong>—first-page rankings within two weeks, with #1 spots achievable in 20-60 days. We guarantee placement in the top three.</p>
+                </div>
+                <div class="image-container">
+                    <img src="how it woks 3.webp" alt="Description" class="how-it-works-image">
+                </div>
+            </div>
+
+            <!-- Image and Text Section 3 -->
+            <div class="image-text-section">
+                <div class="image-container">
+                    <img src="how it works 2.webp" alt="Description" class="how-it-works-image">
+                </div>
+                <div class="text-container">
+                    <h3>You get hundreds of job requests delivered on autopilot</h3>
+                    <p><strong>Never worry about leads again.</strong> Our automated system brings job requests directly to your calendar. You’ll also get a simple platform to manage customer communication—all in one place.</p>
+
+                    <p>With your marketing fully handled, <strong>focus on what you do best</strong> while enjoying a steady flow of high-paying jobs.</p>
+
+                    <p>Feel confident as the top provider in your area, <strong>free from marketing stress</strong>, and excited to grow your business.</p>
+                    
+                    <p><strong>Stability opens the door to long-term success.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <!-- Team Section -->
+        <div class="team-section">
+            <div class="team-intro">
+                <h2>Who you’ll be working with</h2>
+                <h4>A team of seasoned professionals</h4>
+            </div>
+            <div class="team-container">
+                
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img src="dag-holmen.jpg" alt="Team Member 1">
+                    <h4>Dag Holmen</h4>
+                    <h5>Business Development</h5>
+                    <p>Dag specializes in customer psychology and business development, ensuring clients feel, "This is exactly what I need." With six years of expertise, he brings fresh innovation to the team. Outside work, Dag loves traveling.</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <img src="steve-gwyn.jpg" alt="Team Member 2">
+                    <h4>Steve Gwyn</h4>
+                    <h5>Senior Google Specialist</h5>
+                    <p>Steve, a co-founder with 25 years of experience, is the master of sales automation and streamlining operations. His expertise helps businesses become more efficient. When not working, Steve spends time with his family.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <img src="nathan-olsen.jpg" alt="Team Member 3">
+                    <h4>Nathan Olsen</h4>
+                    <h5>Senior Google Specialist</h5>
+                    <p>Nathan, our technical co-founder, is the expert behind ranking businesses #1. With 20+ years of experience, he leads our SEO teams, helping clients dominate their markets. He enjoys time with his family and serving his church.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I’ve already tried SEO and it didn’t work?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our approach is different. We use a proven system tailored to service-based businesses, focusing on high-intent keywords that bring immediate results. Unlike generic SEO agencies, we also integrate automated booking and lead management to ensure you see measurable outcomes—plus some secret sauce I can't tell you here in the FAQ.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How quickly will I see results?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You’ll start seeing noticeable improvements within the first two weeks, such as first-page rankings for major search terms. Achieving the #1 spot typically takes 20–60 days, depending on competition. We guarantee placement in the top three results or you pay nothing.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What’s included in the service?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We handle everything:
+                            <ul class="bullet-points">
+                                <li>Getting your business to the top of Google.</li>
+                                <li>Optimizing your website for conversions.</li>
+                                <li>Setting up an automated booking system to fill your calendar.</li>
+                                <li>Managing customer communication through a single platform.</li>
+                                <li>You focus on your work—we take care of the rest.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens if the system doesn’t work?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>With our <strong>Zero Risk Growth Guarantee</strong>, we’ll refund your investment if we don’t deliver measurable results. Worst-case scenario? You gain a redesigned website, valuable insights, and more control over your lead flow—all risk-free.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I know this will work for my business?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We’ve helped local businesses across industries—roofers, dentists, plastic surgeons, and more—dominate their markets. If your business relies on attracting high-value local clients, our system is designed for you.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Who is this service not for?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>This is not for businesses:
+                            <ul class="bullet-points">
+                                <li>Unprepared to handle an influx of new clients.</li>
+                                <li>Unwilling to invest in their growth.</li>
+                                <li>Dependent solely on word-of-mouth and unwilling to innovate.</li>
+                            </ul>
+                            <p>If you’re ready to grow, this system is for you.</p>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does your guarantee work?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our <strong>Zero-Risk Growth Guarantee</strong> ensures you’ll see results within 90 days. If you follow our recommendations and don’t get measurable patient or job growth, we’ll refund your entire investment. <strong>You have nothing to lose and everything to gain.</strong></p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I move forward to book a call?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Booking a call is easy. Click the <strong>“Book a call”</strong> button on this page, select a time that works for you, and we’ll walk you through the process. No hard sell—just a conversation to see if this is a fit.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Worst-case scenario?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The system doesn’t deliver as promised, and you receive a full refund. You still keep the website improvements and the tools we set up for your business.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Why should I trust you?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We’ve helped businesses like yours achieve measurable growth, and we only work with one provider per area. That exclusivity ensures we’re fully invested in your success. With a guarantee like ours, we’re confident you’ll see the results you deserve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
+    </div>
+
+    <div class="page-container">
+
+        <!-- Bottom Call-to-Action Section -->
+        <div class="bottom-cta-section">
+            <div class="text-container">
+                <h1>Ready to Dominate Your Market?</h1>
+                <p>Join the ranks of industry leaders and become the #1 choice in your area.</p>
+                <ul class="bullet-points">
+                    <li><i class="fas fa-check-circle"></i> Proven strategies for top rankings</li>
+                    <li><i class="fas fa-check-circle"></i> Exclusive service for your area</li>
+                    <li><i class="fas fa-check-circle"></i> Guaranteed results or your money back</li>
+                </ul>
+                <div class="button-container">
+                    <a href="https://calendly.com/dag-holmen/meeting" target="_blank" class="btn-cta">
+                        <i class="fas fa-phone-alt"></i> Book a Call
+                    </a>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="sms system number1s.png" alt="Call to Action Image" class="cta-image">
+            </div>
+        </div>
+    </div>
 
 <script>
     // Keywords to cycle through
     const keywords = [
         "best plastic surgeon",
-        "breast augmentation",
-        "best orthodontist",
+        "roof replacement",
+        "personal injury lawyer",
         "dental veneers",
         "best nose surgeon"
     ];
