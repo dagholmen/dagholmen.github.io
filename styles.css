@@ -1035,6 +1035,15 @@ h4 {
     border-radius: 10px;
 }
 
+.image-container-reverse img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    float: right;
+}
+
 .text-container {
     flex: 2;
 }
