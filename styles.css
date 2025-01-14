@@ -1,0 +1,1154 @@
+@media (min-width: 768px) {
+
+/* Define Custom Font for H1-H3 */
+@font-face {
+    font-family: 'BethanyElingston';
+    src: url('https://raw.githubusercontent.com/dagholmen/dagholmen.github.io/refs/heads/main/Bethany%20Elingston.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+/* Set General Body Font to Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    margin: 0;
+    }
+
+/* Limit Content Width */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.page-container2 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+    
+/* Apply Custom Font to Headings */
+h1, h2, h3{
+    font-family: 'BethanyElingston', sans-serif;
+    font-weight: normal;
+}
+    
+/* Poppins for H4, H5, and Other Body Text */
+h4, h5, p, ul, li, button, input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+/* Remove Default Margins for Body and Headings */
+body, h1, h2, h3, h4, h5, ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Logo Styling */
+.logo {
+    width: 100px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Top Section */
+.hero-section {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #000 !important; /* Use !important if necessary */
+    color: #ffffff !important;
+    font-size: 1.4rem;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-secondary i {
+    transform: scaleX(-1); /* Flips the icon horizontally */
+}
+        
+.btn-secondary:hover {
+    opacity: 0.8;
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff !important; /* Use !important if necessary */
+    color: #000000 !important;
+    font-size: 1.4rem;
+    padding: 15px 25px;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-cta i {
+    transform: scaleX(-1); /* Flips the icon horizontally */
+}
+        
+.btn-cta:hover {
+    opacity: 0.8;
+}
+
+.button-text-below {
+    font-size: 28px;
+    color: #5f6368;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Search Bar */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 0 15px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Search Results */
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.results-container::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
+.result {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.result-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.result-info .practice-name {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.result-info .url {
+    color: #006621;
+    font-size: 0.9rem;
+}
+
+.result-title {
+    font-size: 20px;
+    color: #1a0dab;
+    margin-bottom: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.result-title:hover {
+    text-decoration: underline;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.star-rating .stars {
+    color: #fdd663;
+    font-size: 1rem;
+}
+
+.star-rating span {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color: #5f6368;
+}
+
+.result p {
+    font-size: 1rem;
+    color: #545454;
+    margin-top: -3px;
+}
+
+.top-result-title {
+    font-weight: bold;
+}
+
+
+/* Footer Section */
+.bold-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 30px 0;
+    color: #bf2121;
+}
+
+.proof-section {
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px; /* Added bottom margin */
+    text-align: center; /* Center align content */
+}
+
+.video-section {
+    text-align: center;
+    margin: 40px auto;
+    margin-bottom: 50px; /* Added bottom margin */
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    margin-bottom: 50px; /* Added bottom margin */
+}
+
+.image-text-section .image-container,
+.image-text-section .text-container {
+    max-width: 600px;
+}
+
+.team-section {
+    text-align: center;
+    margin: 40px 0;
+    margin-bottom: 50px; /* Added bottom margin */
+    background-color: #f5f5f5;
+    border-radius: 20px;
+}
+
+.team-member {
+    padding: 0 20px; /* 20px padding on left and right to make 40px total between members */
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.team-member img {
+    max-width: 200px;
+}
+
+.faq-item {
+    border-radius: 100px;
+}
+
+.hero-section img {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-section h3 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.marquee-section {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 60s linear infinite;
+}
+
+.marquee-logo {
+    max-height: 100px;
+    margin: 0 20px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.video-wrapper {
+    flex: 1;
+}
+
+.video-wrapper h3 {
+    padding-top: 20px;
+}
+
+.cta-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 20px;
+}
+
+.cta-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.button-container a {
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.how-it-works-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align content to the outer edge */
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 2;
+}
+
+.team-section {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.team-member {
+    flex: 1;
+    max-width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.faq-section {
+    padding: 40px 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.bullet-points {
+    padding-left: 20px;
+}
+
+.bottom-cta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 50px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.bottom-cta-section .text-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.bottom-cta-section .text-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.bottom-cta-section .text-container p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.bottom-cta-section .text-container .bullet-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.bottom-cta-section .text-container .bullet-points li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.bottom-cta-section .text-container .bullet-points li i {
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.bottom-cta-section .button-container {
+    text-align: center;
+}
+
+.bottom-cta-section .btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.bottom-cta-section .btn-cta i {
+    margin-right: 10px;
+}
+
+.bottom-cta-section .image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.bottom-cta-section .image-container .cta-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -50px;
+}
+
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+
+/* Define Custom Font for H1-H3 */
+@font-face {
+    font-family: 'BethanyElingston';
+    src: url('https://raw.githubusercontent.com/dagholmen/dagholmen.github.io/refs/heads/main/Bethany%20Elingston.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+/* Set General Body Font to Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    margin: 0;
+    }
+
+/* Limit Content Width */
+.page-container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.page-container2 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+    
+/* Apply Custom Font to Headings */
+h1, h2, h3{
+    font-family: 'BethanyElingston', sans-serif;
+    font-weight: normal;
+}
+    
+/* Poppins for H4, H5, and Other Body Text */
+h4, h5, p, ul, li, button, input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+/* Remove Default Margins for Body and Headings */
+body, h1, h2, h3, h4, h5, ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+h4 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Logo Styling */
+.logo {
+    width: 100px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Top Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #000 !important; /* Use !important if necessary */
+    color: #ffffff !important;
+    font-size: 1.4rem;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-secondary i {
+    transform: scaleX(-1); /* Flips the icon horizontally */
+}
+        
+.btn-secondary:hover {
+    opacity: 0.8;
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff !important; /* Use !important if necessary */
+    color: #000000 !important;
+    font-size: 1.4rem;
+    padding: 15px 0px;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-cta i {
+    transform: scaleX(-1); /* Flips the icon horizontally */
+}
+        
+.btn-cta:hover {
+    opacity: 0.8;
+}
+
+.button-text-below {
+    font-size: 28px;
+    color: #5f6368;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Search Bar */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 0 15px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Search Results */
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.results-container::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
+.result {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.result-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.result-info .practice-name {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.result-info .url {
+    color: #006621;
+    font-size: 0.9rem;
+}
+
+.result-title {
+    font-size: 20px;
+    color: #1a0dab;
+    margin-bottom: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.result-title:hover {
+    text-decoration: underline;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.star-rating .stars {
+    color: #fdd663;
+    font-size: 1rem;
+}
+
+.star-rating span {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color: #5f6368;
+}
+
+.result p {
+    font-size: 1rem;
+    color: #545454;
+    margin-top: -3px;
+}
+
+.top-result-title {
+    font-weight: bold;
+}
+
+
+/* Footer Section */
+.bold-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 30px 0;
+    color: #bf2121;
+}
+
+.proof-section {
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px; /* Added bottom margin */
+    text-align: center; /* Center align content */
+}
+
+.video-section {
+    text-align: center;
+    margin: 40px auto;
+    margin-bottom: 50px; /* Added bottom margin */
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    margin-bottom: 50px; /* Added bottom margin */
+}
+
+.image-text-section-reverse {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    margin-bottom: 50px; /* Added bottom margin */
+    flex-direction: column-reverse; /* Reverse flex direction */
+}
+
+.image-text-section .image-container,
+.image-text-section .text-container {
+    max-width: 600px;
+}
+
+.team-section {
+    text-align: center;
+    margin: 40px 0;
+    margin-bottom: 0px; /* Added bottom margin */
+    background-color: #f5f5f5;
+    border-radius: 20px;
+}
+
+.team-member {
+    padding: 0 20px; /* 20px padding on left and right to make 40px total between members */
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.team-member img {
+    max-width: 200px;
+}
+
+.faq-item {
+    border-radius: 100px;
+}
+
+.hero-section img {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-section h3 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.marquee-section {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 60s linear infinite;
+}
+
+.marquee-logo {
+    max-height: 100px;
+    margin: 0 20px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.video-wrapper {
+    flex: 1;
+}
+
+.video-wrapper h3 {
+    padding-top: 20px;
+}
+
+.cta-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 20px;
+}
+
+.cta-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.button-container a {
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align content to the outer edge */
+    flex-direction: column;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 2;
+}
+
+.team-section {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.team-intro {
+    padding: 0 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.team-member {
+    flex: 1;
+    max-width: 200px;
+    padding: 20px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.faq-section {
+    padding: 40px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.bullet-points {
+    padding-left: 20px;
+}
+
+.bottom-cta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.bottom-cta-section .text-container {
+    flex: 1;
+}
+
+.bottom-cta-section .text-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.bottom-cta-section .text-container p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.bottom-cta-section .text-container .bullet-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.bottom-cta-section .text-container .bullet-points li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.bottom-cta-section .text-container .bullet-points li i {
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.bottom-cta-section .button-container {
+    text-align: center;
+}
+
+.bottom-cta-section .btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.bottom-cta-section .btn-cta i {
+    margin-right: 10px;
+}
+
+.bottom-cta-section .image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.bottom-cta-section .image-container .cta-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -20px;
+    margin-top: 20px;
+}
+
+}
