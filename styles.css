@@ -78,9 +78,20 @@ h4 {
 
 /* Top Section */
 .hero-section {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
     padding-top: 100px;
     margin-bottom: 40px;
+}
+
+.hero-title {
+    max-width: 800px;
+}
+
+.hero-description-container {
+    max-width: 600px;
 }
 
 .hero-section h1 {
@@ -101,6 +112,7 @@ h4 {
     gap: 10px;
     width: 100%;
     max-width: 300px;
+    min-width: 300px;
     background-color: #000 !important; /* Use !important if necessary */
     color: #ffffff !important;
     font-size: 1.4rem;
@@ -127,6 +139,7 @@ h4 {
     gap: 10px;
     width: 100%;
     max-width: 300px;
+    min-width: 300px;
     background-color: #ffffff !important; /* Use !important if necessary */
     color: #000000 !important;
     font-size: 1.4rem;
@@ -291,6 +304,13 @@ h4 {
     margin-bottom: 50px; /* Added bottom margin */
 }
 
+.image-text-section-reverse {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    margin-bottom: 50px; /* Added bottom margin */
+}
+
 .image-text-section .image-container,
 .image-text-section .text-container {
     max-width: 600px;
@@ -406,6 +426,12 @@ h4 {
 
 .image-container {
     flex: 1;
+    width: 600px;
+}
+
+.image-container-reverse {
+    flex: 1;
+    width: 600px;
 }
 
 .image-container img {
@@ -414,10 +440,21 @@ h4 {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
+    float: left;
+}
+
+.image-container-reverse img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    float: right;
 }
 
 .text-container {
     flex: 2;
+    max-width: 600px;
 }
 
 .team-section {
