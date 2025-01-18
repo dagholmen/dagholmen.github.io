@@ -333,7 +333,7 @@ h4 {
     color: #bf2121;
 }
 
-.proof-section {
+.trust-section {
     margin-top: -50px;
     position: relative;
     z-index: 2;
@@ -366,7 +366,7 @@ h4 {
     max-width: 600px;
 }
 
-.team-section {
+.team-members-section {
     text-align: center;
     margin: 40px 0;
     margin-bottom: 50px; /* Added bottom margin */
@@ -463,7 +463,7 @@ h4 {
     width: 100%;
 }
 
-.how-it-works-section {
+.how-it-works-container {
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -507,7 +507,7 @@ h4 {
     max-width: 600px;
 }
 
-.team-section {
+.team-members-section {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -529,11 +529,11 @@ h4 {
     border-radius: 50%;
 }
 
-.faq-section {
+.faq-questions-section {
     padding: 40px 20px;
 }
 
-.faq-section h2 {
+.faq-questions-section h2 {
     text-align: center;
     padding-bottom: 20px;
 }
@@ -1007,7 +1007,7 @@ h4 {
     color: #bf2121;
 }
 
-.proof-section {
+.trust-section {
     margin-top: -100px;
     position: relative;
     z-index: 2;
@@ -1041,7 +1041,7 @@ h4 {
     max-width: 600px;
 }
 
-.team-section {
+.team-members-section {
     text-align: center;
     margin: 40px 0;
     margin-bottom: 0px; /* Added bottom margin */
@@ -1172,7 +1172,7 @@ h4 {
     flex: 2;
 }
 
-.team-section {
+.team-members-section {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1200,11 +1200,11 @@ h4 {
     border-radius: 50%;
 }
 
-.faq-section {
+.faq-questions-section {
     padding: 40px 0;
 }
 
-.faq-section h2 {
+.faq-questions-section h2 {
     text-align: center;
     padding-bottom: 20px;
 }
