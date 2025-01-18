@@ -31,6 +31,55 @@ body {
     box-sizing: border-box;
     background-color: #f5f5f5;
 }
+
+.navbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 50px;
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
     
 /* Apply Custom Font to Headings */
 h1, h2, h3{
@@ -83,6 +132,7 @@ h4 {
     text-align: center;
     align-items: center;
     padding-top: 40px;
+    margin-top: 120px;
     margin-bottom: 40px;
 }
 
@@ -659,6 +709,55 @@ body {
     box-sizing: border-box;
     background-color: #f5f5f5;
 }
+
+.navbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 50px;
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
     
 /* Apply Custom Font to Headings */
 h1, h2, h3{
@@ -711,11 +810,12 @@ h4 {
     text-align: center;
     align-items: center;
     padding-top: 20px;
+    margin-top: 80px;
     margin-bottom: 40px;
 }
 
 .hero-section h1 {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: normal;
     line-height: 1.1;
     margin-bottom: 20px;
