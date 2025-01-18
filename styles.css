@@ -560,6 +560,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #000;
 }
 
 .faq-answer {
@@ -1230,6 +1231,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #000;
 }
 
 .faq-answer {
